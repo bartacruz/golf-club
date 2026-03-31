@@ -43,7 +43,7 @@ class ResPartner(models.Model):
     def name_get_for_search(self):
         res = []
         for partner in self:
-            name = partner._get_name()
+            name = partner.display_name
             if partner.golf_license:
                 name = '%s (%s)' % (name,partner.golf_license)
             res.append((partner.id, name))
