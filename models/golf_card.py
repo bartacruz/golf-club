@@ -50,19 +50,12 @@ class GolfCard(models.Model):
         'account.move', string='Invoice', readonly=True, copy=False)
 
     stage = fields.Selection(selection=[
-        ('new','New'),
+        ('draft','Draft'),
         ('active','Active'),
-        ('presented','Presented'),
+        ('posted','Posted'),
         ('loaded','Loaded'),
         ('cancelled','Cancelled'),
         ], default='new')
-    stage_id = fields.Many2one(
-        "golf.cardstage",
-        string="Stage",
-        index=True,
-        copy=False,
-        default=lambda self: self._default_stage_id(),
-    )
     external_reference = fields.Integer()
     posted = fields.Boolean()
     
@@ -79,16 +72,6 @@ class GolfCard(models.Model):
             else:
                 record.position_label = None
 
-    def _default_stage_id(self):
-        stage_ids = self.env["golf.cardstage"].search(
-            [("is_default", "=", True), ],
-            order="sequence asc",
-            limit=1,
-        )
-        if stage_ids:
-            return stage_ids[0]
-        else:
-            raise ValidationError(_("You must create an golf stage first."))
 
     def _default_tournament_id(self):
         tournament_ids = self.env["golf.tournament"].search(
@@ -101,17 +84,7 @@ class GolfCard(models.Model):
         else:
             raise ValidationError(
                 _("You must create an golf tournament first."))
-
-    @api.onchange('account_move_id')
-    def check_stage(self):
-        if not self.stage_id.is_closed and self.account_move_id:
-            stage = self.env["golf.cardstage"].search(
-                [("name", "=", 'Active'), ],
-                limit=1,)
-            if len(stage):
-                self.stage_id = stage[0]
-        
-            
+                    
     def _calculate_handicap(self,field, player):
         if player.golf_handicap_index > 0:
             handicap = round(
@@ -174,19 +147,20 @@ class GolfCard(models.Model):
             if net != rec.net_score:
                 rec.tournament_id.action_leaderboard()
 
-    @api.model
-    def create(self, vals):
-        if vals.get("name", _("New")) == _("New"):
-            vals["name"] = self.env["ir.sequence"].next_by_code("golf.card")
-        card = super(GolfCard, self).create(vals)
-        if not len(card.score_ids) and card.tournament_id:
-            for hole in card.tournament_id.get_holes():
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if vals.get("name", _("New")) == _("New"):
+                vals["name"] = self.env["ir.sequence"].next_by_code("golf.card")
+        cards = super(GolfCard, self).create(vals_list)
+        for card in cards:
+            for hole in card.tournament_id.field_ids.mapped('hole_ids'):
                 values = {
                     'card_id': card.id,
                     'hole_id': hole.id,
                 }
                 self.env["golf.score"].sudo().create(values)
-        return card
+        return cards
     
     def write(self, vals):
         r = super().write(vals)
@@ -275,7 +249,6 @@ class GolfCard(models.Model):
         new_move = self.env['account.move'].sudo().with_context(
             default_move_type=move_vals['move_type']).create(move_vals)
         self.write({'account_move_id': new_move.id})
-        self.check_stage()
         return {
             'name': _('Customer Invoice'),
             'view_mode': 'form',
@@ -298,7 +271,8 @@ class GolfScore(models.Model):
         required=True,
         index=True,
         copy=False,
-        default=lambda self: _("New"),
+        compute="_compute_name",
+        store=True,
     )
 
     card_id = fields.Many2one('golf.card', string='Card',
@@ -310,14 +284,11 @@ class GolfScore(models.Model):
 
     score = fields.Integer(string='Score')
 
-    @api.model
-    def create(self, vals):
-        if vals.get("name", _("New")) == _("New"):
-            vals["name"] = self.env["ir.sequence"].next_by_code(
-                "golf.score") or _("New")
-
-        return super(GolfScore, self).create(vals)
-
+    @api.depends('card_id', 'hole_id')
+    def _compute_name(self):
+        for rec in self:
+            rec.name = '%s - %s' % (rec.card_id.name, rec.hole_id.name,)
+    
     @api.depends("hole_id")
     def _set_field_name(self):
         for rec in self:
@@ -325,33 +296,3 @@ class GolfScore(models.Model):
 
     def get_field_name(self):
         return self.hole_id.field_id.name
-
-
-class GolfCardStage(models.Model):
-    _name = "golf.cardstage"
-    _description = "Golf Card Stage"
-    _order = "sequence, name, id"
-
-    name = fields.Char(string="Name", required=True)
-    sequence = fields.Integer(
-        "Sequence", default=1, help="Used to order stages. Lower is better."
-    )
-    is_closed = fields.Boolean(
-        "Is a close stage", help="Services in this stage are considered " "as closed."
-    )
-    is_default = fields.Boolean(
-        "Is a default stage", help="Used a default stage")
-    custom_color = fields.Char(
-        "Color Code", default="#FFFFFF", help="Use Hex Code only Ex:-#FFFFFF"
-    )
-    description = fields.Text(translate=True)
-
-    @api.constrains("custom_color")
-    def _check_custom_color_hex_code(self):
-        if (
-            self.custom_color
-            and not self.custom_color.startswith("#")
-            or len(self.custom_color) != 7
-        ):
-            raise ValidationError(
-                _("Color code should be Hex Code. Ex:-#FFFFFF"))
