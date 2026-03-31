@@ -1,865 +1,866 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* golf
+# 	* golf_club
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 15.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-23 04:14+0000\n"
 "PO-Revision-Date: 2022-09-23 04:14+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: es_AR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.tournaments
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.tournaments
 msgid ""
 "<span class=\"fa fa-trophy\"/>\n"
 "                                        Leaderboard"
 msgstr "<span class=\"fa fa-trophy\"/>Resultados"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_card_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_card_form
 msgid "<span class=\"o_span_text\">Create Invoice</span>"
 msgstr "<span class=\"o_span_text\">Crear Factura</span>"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_card_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_card_form
 msgid "<span class=\"o_span_text\">Invoice</span>"
 msgstr "<span class=\"o_span_text\">Factura</span>"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_form
 msgid "<span class=\"o_stat_text\">Leaderboard</span>"
 msgstr "<span class=\"o_stat_text\">Resultados</span>"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__message_needaction
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__message_needaction
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__message_needaction
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__message_needaction
 msgid "Action Needed"
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_form
 msgid "Activate"
 msgstr "Activar"
 
-#. module: golf
-#: model:ir.model.fields.selection,name:golf.selection__golf_card__stage__active
-#: model:ir.model.fields.selection,name:golf.selection__golf_tournament__state__active
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_search
+#. module: golf_club
+#: model:ir.model.fields.selection,name:golf_club.selection__golf_card__stage__active
+#: model:ir.model.fields.selection,name:golf_club.selection__golf_tournament__state__active
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_search
 msgid "Active"
 msgstr "Activo"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__active_card_count
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__active_card_count
 msgid "Active Card Count"
 msgstr "Tarjetas Activas"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__activity_ids
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__activity_ids
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__activity_ids
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__activity_ids
 msgid "Activities"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__activity_exception_decoration
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__activity_exception_decoration
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__activity_exception_decoration
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__activity_exception_decoration
 msgid "Activity Exception Decoration"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__activity_state
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__activity_state
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__activity_state
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__activity_state
 msgid "Activity State"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__activity_type_icon
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__activity_type_icon
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__activity_type_icon
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__activity_type_icon
 msgid "Activity Type Icon"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__message_attachment_count
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__message_attachment_count
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__message_attachment_count
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__message_attachment_count
 msgid "Attachment Count"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields.selection,name:golf.selection__golf_tournament__category__0
+#. module: golf_club
+#: model:ir.model.fields.selection,name:golf_club.selection__golf_tournament__category__0
 msgid "Caballeros"
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_form
 msgid "Calculate"
 msgstr "Recalcular"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__can_publish
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__can_publish
 msgid "Can Publish"
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_form
 msgid "Cancel"
 msgstr "Cancelar"
 
-#. module: golf
-#: model:ir.model.fields.selection,name:golf.selection__golf_card__stage__cancelled
-#: model:ir.model.fields.selection,name:golf.selection__golf_tournament__state__cancelled
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_search
+#. module: golf_club
+#: model:ir.model.fields.selection,name:golf_club.selection__golf_card__stage__cancelled
+#: model:ir.model.fields.selection,name:golf_club.selection__golf_tournament__state__cancelled
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_search
 msgid "Cancelled"
 msgstr "Cancelado"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_score__card_id
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_score__card_id
 msgid "Card"
 msgstr "Tarjeta"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__card_count
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__card_count
 msgid "Card Count"
 msgstr "Tarjetas"
 
-#. module: golf
-#: model:ir.ui.menu,name:golf.menu_golf_cardstage
+#. module: golf_club
+#: model:ir.ui.menu,name:golf_club.menu_golf_cardstage
 msgid "Card Stages"
 msgstr ""
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_tournament.py:0
 #, python-format
 msgid "Card posted"
 msgstr "Tarjeta subida"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_card.py:0
 #, python-format
 msgid "Card presented"
 msgstr "Tarjeta presentada"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_card.py:0
 #, python-format
 msgid "Card scores loaded"
 msgstr "Tarjeta cargada"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_card_search
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_card_search
 msgid "Card search"
 msgstr "Buscar tarjeta"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_tournament.py:0
 #: code:addons/golf/models/res_partner.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__card_ids
-#: model:ir.model.fields,field_description:golf.field_res_partner__golf_card_ids
-#: model:ir.model.fields,field_description:golf.field_res_users__golf_card_ids
-#: model:ir.ui.menu,name:golf.menu_golf_card
-#: model_terms:ir.ui.view,arch_db:golf.golf_partner_fields
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_form
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__card_ids
+#: model:ir.model.fields,field_description:golf_club.field_res_partner__golf_card_ids
+#: model:ir.model.fields,field_description:golf_club.field_res_users__golf_card_ids
+#: model:ir.ui.menu,name:golf_club.menu_golf_card
+#: model_terms:ir.ui.view,arch_db:golf_club.golf_partner_fields
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_form
 #, python-format
 msgid "Cards"
 msgstr "Tarjetas"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__category
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__category
 msgid "Category"
 msgstr "Categoria"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__child_ids
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__child_ids
 msgid "Child"
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.actions.act_window,help:golf.action_golf_card_act_window
-#: model_terms:ir.actions.act_window,help:golf.action_golf_cards_related
+#. module: golf_club
+#: model_terms:ir.actions.act_window,help:golf_club.action_golf_card_act_window
+#: model_terms:ir.actions.act_window,help:golf_club.action_golf_cards_related
 msgid "Click to add new golf card"
 msgstr "Click para agregar una nueva tarjeta"
 
-#. module: golf
-#: model_terms:ir.actions.act_window,help:golf.action_golf_field_act_window
-#: model_terms:ir.actions.act_window,help:golf.action_golf_tournament_act_window
+#. module: golf_club
+#: model_terms:ir.actions.act_window,help:golf_club.action_golf_field_act_window
+#: model_terms:ir.actions.act_window,help:golf_club.action_golf_tournament_act_window
 msgid "Click to add new golf field"
 msgstr "Click para agregar un nuevo campo"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.res_config_settings_view_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.res_config_settings_view_form
 msgid "Club ID"
 msgstr "Nro de Club"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_tournament_mode__code
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament_mode__code
 msgid "Code"
 msgstr "Código"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_cardstage__custom_color
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_cardstage__custom_color
 msgid "Color Code"
 msgstr ""
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_card.py:0
 #, python-format
 msgid "Color code should be Hex Code. Ex:-#FFFFFF"
 msgstr ""
 
-#. module: golf
-#: model:ir.model,name:golf.model_res_config_settings
+#. module: golf_club
+#: model:ir.model,name:golf_club.model_res_config_settings
 msgid "Config Settings"
 msgstr "Opciones de configuración"
 
-#. module: golf
-#: model:ir.model,name:golf.model_res_partner
+#. module: golf_club
+#: model:ir.model,name:golf_club.model_res_partner
 msgid "Contact"
 msgstr "Contacto"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_field.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_field__course_rating_back
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__course_rating_back
 #, python-format
 msgid "Course Rating Back"
 msgstr "Calificación Vuelta"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_field.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_field__course_rating_front
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__course_rating_front
 #, python-format
 msgid "Course Rating Front"
 msgstr "Calificación Ida"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_field.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_field__course_rating_total
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__course_rating_total
 #, python-format
 msgid "Course Rating Total"
 msgstr "Calificación Total"
 
-#. module: golf
-#: model_terms:ir.actions.act_window,help:golf.action_golf_cardstage_act_window
+#. module: golf_club
+#: model_terms:ir.actions.act_window,help:golf_club.action_golf_cardstage_act_window
 msgid "Create a Stage."
 msgstr "Crear una etapa"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__create_uid
-#: model:ir.model.fields,field_description:golf.field_golf_cardstage__create_uid
-#: model:ir.model.fields,field_description:golf.field_golf_field__create_uid
-#: model:ir.model.fields,field_description:golf.field_golf_hole__create_uid
-#: model:ir.model.fields,field_description:golf.field_golf_score__create_uid
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__create_uid
-#: model:ir.model.fields,field_description:golf.field_golf_tournament_mode__create_uid
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__create_uid
+#: model:ir.model.fields,field_description:golf_club.field_golf_cardstage__create_uid
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__create_uid
+#: model:ir.model.fields,field_description:golf_club.field_golf_hole__create_uid
+#: model:ir.model.fields,field_description:golf_club.field_golf_score__create_uid
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__create_uid
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament_mode__create_uid
 msgid "Created by"
 msgstr "Creado por"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__create_date
-#: model:ir.model.fields,field_description:golf.field_golf_cardstage__create_date
-#: model:ir.model.fields,field_description:golf.field_golf_field__create_date
-#: model:ir.model.fields,field_description:golf.field_golf_hole__create_date
-#: model:ir.model.fields,field_description:golf.field_golf_score__create_date
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__create_date
-#: model:ir.model.fields,field_description:golf.field_golf_tournament_mode__create_date
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__create_date
+#: model:ir.model.fields,field_description:golf_club.field_golf_cardstage__create_date
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__create_date
+#: model:ir.model.fields,field_description:golf_club.field_golf_hole__create_date
+#: model:ir.model.fields,field_description:golf_club.field_golf_score__create_date
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__create_date
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament_mode__create_date
 msgid "Created on"
 msgstr "Creado el"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_card.py:0
 #, python-format
 msgid "Customer Invoice"
 msgstr "Factura de cliente"
 
-#. module: golf
-#: model:ir.model.fields.selection,name:golf.selection__golf_tournament__category__1
+#. module: golf_club
+#: model:ir.model.fields.selection,name:golf_club.selection__golf_tournament__category__1
 msgid "Damas"
 msgstr "Damas"
 
-#. module: golf
-#: model:ir.ui.menu,name:golf.menu_golf_data
+#. module: golf_club
+#: model:ir.ui.menu,name:golf_club.menu_golf_data
 msgid "Data"
 msgstr "Datos"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_tournament.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_card__date
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__date
-#: model_terms:ir.ui.view,arch_db:golf.portal_my_golfcards
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__date
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__date
+#: model_terms:ir.ui.view,arch_db:golf_club.portal_my_golfcards
 #, python-format
 msgid "Date"
 msgstr "Fecha"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.res_config_settings_view_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.res_config_settings_view_form
 msgid "Datos del club"
 msgstr "Datos del club"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_tournament_mode__default
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament_mode__default
 msgid "Default"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__default_product_id
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__default_product_id
 msgid "Default Product"
 msgstr "Producto Default"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/res_config_settings.py:0
-#: model:ir.model.fields,field_description:golf.field_res_config_settings__golf_default_field_18
+#: model:ir.model.fields,field_description:golf_club.field_res_config_settings__golf_default_field_18
 #, python-format
 msgid "Default field 18"
 msgstr "Campo default 18"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/res_config_settings.py:0
-#: model:ir.model.fields,field_description:golf.field_res_config_settings__golf_default_field_9
+#: model:ir.model.fields,field_description:golf_club.field_res_config_settings__golf_default_field_9
 #, python-format
 msgid "Default field 9"
 msgstr "Campo default 9"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/res_config_settings.py:0
-#: model:ir.model.fields,field_description:golf.field_res_config_settings__golf_default_product
+#: model:ir.model.fields,field_description:golf_club.field_res_config_settings__golf_default_product
 #, python-format
 msgid "Default product"
 msgstr "Producto de membresía"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.res_config_settings_view_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.res_config_settings_view_form
 msgid "Defaults"
 msgstr "Opciones por defecto"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_cardstage__description
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_cardstage__description
 msgid "Description"
 msgstr "Descripción"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__display_name
-#: model:ir.model.fields,field_description:golf.field_golf_cardstage__display_name
-#: model:ir.model.fields,field_description:golf.field_golf_field__display_name
-#: model:ir.model.fields,field_description:golf.field_golf_hole__display_name
-#: model:ir.model.fields,field_description:golf.field_golf_score__display_name
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__display_name
-#: model:ir.model.fields,field_description:golf.field_golf_tournament_mode__display_name
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__display_name
+#: model:ir.model.fields,field_description:golf_club.field_golf_cardstage__display_name
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__display_name
+#: model:ir.model.fields,field_description:golf_club.field_golf_hole__display_name
+#: model:ir.model.fields,field_description:golf_club.field_golf_score__display_name
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__display_name
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament_mode__display_name
 msgid "Display Name"
 msgstr "Nombre mostrado"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.portal_my_home
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.portal_my_home
 msgid "Documents"
 msgstr "Documentos"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_tournament.py:0
 #, python-format
 msgid "Error posting tournament"
 msgstr "Error al publicar torneo"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_form
 msgid "External Info"
 msgstr "Info externa"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__external_reference
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__external_reference
-#: model:ir.model.fields,field_description:golf.field_golf_tournament_mode__external_reference
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__external_reference
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__external_reference
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament_mode__external_reference
 msgid "External Reference"
 msgstr "Referencia Externa"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_field__external_reference
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__external_reference
 msgid "External reference"
 msgstr "Referencia externa"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.res_config_settings_view_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.res_config_settings_view_form
 msgid "Facturación"
 msgstr "Facturación"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_form
 msgid "Fetch"
 msgstr "Obtener"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_tournament.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_hole__field_id
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__field_id
+#: model:ir.model.fields,field_description:golf_club.field_golf_hole__field_id
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__field_id
 #, python-format
 msgid "Field"
 msgstr "Campo"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.res_config_settings_view_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.res_config_settings_view_form
 msgid "Field 18 holes"
 msgstr "Campo 18 hoyos"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.res_config_settings_view_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.res_config_settings_view_form
 msgid "Field 9 holes"
 msgstr "Campo 9 hoyos"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_score__field_name
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_score__field_name
 msgid "Field Name"
 msgstr "Nombre del campo"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_tournament.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__field_ids
-#: model:ir.ui.menu,name:golf.menu_golf_field
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__field_ids
+#: model:ir.ui.menu,name:golf_club.menu_golf_field
 #, python-format
 msgid "Fields"
 msgstr "Campos"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.res_config_settings_view_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.res_config_settings_view_form
 msgid "Fin de semana"
 msgstr "Fin de semana"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_form
 msgid "Finish"
 msgstr "Cerrar"
 
-#. module: golf
-#: model:ir.model.fields.selection,name:golf.selection__golf_tournament__state__finished
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_search
+#. module: golf_club
+#: model:ir.model.fields.selection,name:golf_club.selection__golf_tournament__state__finished
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_search
 msgid "Finished"
 msgstr "Cerrado"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_card.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_card__gross_score_first
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__gross_score_first
 #, python-format
 msgid "First 9"
 msgstr "Primeros 9"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__message_follower_ids
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__message_follower_ids
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__message_follower_ids
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__message_follower_ids
 msgid "Followers"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__message_partner_ids
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__message_partner_ids
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__message_partner_ids
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__message_partner_ids
 msgid "Followers (Partners)"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,help:golf.field_golf_card__activity_type_icon
-#: model:ir.model.fields,help:golf.field_golf_tournament__activity_type_icon
+#. module: golf_club
+#: model:ir.model.fields,help:golf_club.field_golf_card__activity_type_icon
+#: model:ir.model.fields,help:golf_club.field_golf_tournament__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
 msgstr ""
 
-#. module: golf
-#: model:ir.actions.server,name:golf.golf_membership_invoice_action
+#. module: golf_club
+#: model:ir.actions.server,name:golf_club.golf_membership_invoice_action
 msgid "Generate Membership Invoice"
 msgstr "Generar facturas de membresías"
 
-#. module: golf
-#: model:ir.ui.menu,name:golf.menu_golf
-#: model_terms:ir.ui.view,arch_db:golf.golf_partner_fields
-#: model_terms:ir.ui.view,arch_db:golf.res_config_settings_view_form
+#. module: golf_club
+#: model:ir.ui.menu,name:golf_club.menu_golf
+#: model_terms:ir.ui.view,arch_db:golf_club.golf_partner_fields
+#: model_terms:ir.ui.view,arch_db:golf_club.res_config_settings_view_form
 msgid "Golf"
 msgstr ""
 
-#. module: golf
+#. module: golf_club
 #. openerp-web
 #: code:addons/golf/static/src/xml/golf_card.xml:0
-#: model:ir.actions.report,name:golf.action_golf_card_report
+#: model:ir.actions.report,name:golf_club.action_golf_card_report
 #, python-format
 msgid "Golf Card"
 msgstr "Tarjeta"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_res_partner__golf_card_count
-#: model:ir.model.fields,field_description:golf.field_res_users__golf_card_count
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_res_partner__golf_card_count
+#: model:ir.model.fields,field_description:golf_club.field_res_users__golf_card_count
 msgid "Golf Card Count"
 msgstr "Tarjetas"
 
-#. module: golf
-#: model:ir.model,name:golf.model_golf_cardstage
+#. module: golf_club
+#: model:ir.model,name:golf_club.model_golf_cardstage
 msgid "Golf Card Stage"
 msgstr "Etapa de la tarjeta"
 
-#. module: golf
-#: model:ir.actions.act_window,name:golf.action_golf_card_act_window
+#. module: golf_club
+#: model:ir.actions.act_window,name:golf_club.action_golf_card_act_window
 msgid "Golf Cardo"
 msgstr "Tarjeta"
 
-#. module: golf
-#: model:ir.actions.act_window,name:golf.action_golf_cards_related
-#: model_terms:ir.ui.view,arch_db:golf.portal_my_golfcards
-#: model_terms:ir.ui.view,arch_db:golf.portal_my_home_golfcards
+#. module: golf_club
+#: model:ir.actions.act_window,name:golf_club.action_golf_cards_related
+#: model_terms:ir.ui.view,arch_db:golf_club.portal_my_golfcards
+#: model_terms:ir.ui.view,arch_db:golf_club.portal_my_home_golfcards
 msgid "Golf Cards"
 msgstr "Tarjetas"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_res_config_settings__golf_club_id
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_res_config_settings__golf_club_id
 msgid "Golf Club"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_res_config_settings__golf_default_identification_type
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_res_config_settings__golf_default_identification_type
 msgid "Golf Default Identification Type"
 msgstr "Tipo de identificación default"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_res_config_settings__golf_default_responsibility
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_res_config_settings__golf_default_responsibility
 msgid "Golf Default Responsibility"
 msgstr "Tipo de responsabilidad default"
 
-#. module: golf
-#: model:ir.actions.client,name:golf.action_golf_home_page
+#. module: golf_club
+#: model:ir.actions.client,name:golf_club.action_golf_home_page
 msgid "Golf Home"
 msgstr "Inicio"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_res_config_settings__golf_members_pricelist
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_res_config_settings__golf_members_pricelist
 msgid "Golf Members Pricelist"
 msgstr "Lista de precio socios"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/res_partner.py:0
 #, python-format
 msgid "Golf Memberships %s"
 msgstr "Membresía Golf %s"
 
-#. module: golf
-#: model:ir.actions.act_window,name:golf.action_golf_field_act_window
+#. module: golf_club
+#: model:ir.actions.act_window,name:golf_club.action_golf_field_act_window
 msgid "Golf field"
 msgstr "Campo"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_card.py:0
 #: code:addons/golf/models/res_partner.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_card__player_license
-#: model:ir.model.fields,field_description:golf.field_res_partner__golf_license
-#: model:ir.model.fields,field_description:golf.field_res_users__golf_license
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__player_license
+#: model:ir.model.fields,field_description:golf_club.field_res_partner__golf_license
+#: model:ir.model.fields,field_description:golf_club.field_res_users__golf_license
 #, python-format
 msgid "Golf license"
 msgstr "Matrícula"
 
-#. module: golf
-#: model:ir.model,name:golf.model_golf_hole
+#. module: golf_club
+#: model:ir.model,name:golf_club.model_golf_hole
 msgid "GolfHole"
 msgstr "Hoyo"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.res_config_settings_view_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.res_config_settings_view_form
 msgid "Green Fees"
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.portal_my_golfcards
-#: model_terms:ir.ui.view,arch_db:golf.tournament
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.portal_my_golfcards
+#: model_terms:ir.ui.view,arch_db:golf_club.tournament
 msgid "Gross"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__gross_score
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__gross_score
 msgid "Gross Score"
 msgstr "Gross"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_card.py:0
 #: code:addons/golf/models/res_partner.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_card__player_handicap
-#: model:ir.model.fields,field_description:golf.field_golf_hole__handicap
-#: model:ir.model.fields,field_description:golf.field_res_partner__golf_handicap
-#: model:ir.model.fields,field_description:golf.field_res_users__golf_handicap
-#: model_terms:ir.ui.view,arch_db:golf.golf_player_view_kanban
-#: model_terms:ir.ui.view,arch_db:golf.portal_my_golfcards
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__player_handicap
+#: model:ir.model.fields,field_description:golf_club.field_golf_hole__handicap
+#: model:ir.model.fields,field_description:golf_club.field_res_partner__golf_handicap
+#: model:ir.model.fields,field_description:golf_club.field_res_users__golf_handicap
+#: model_terms:ir.ui.view,arch_db:golf_club.golf_player_view_kanban
+#: model_terms:ir.ui.view,arch_db:golf_club.portal_my_golfcards
 #, python-format
 msgid "Handicap"
 msgstr ""
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/res_partner.py:0
-#: model:ir.model.fields,field_description:golf.field_res_partner__golf_handicap_index
-#: model:ir.model.fields,field_description:golf.field_res_users__golf_handicap_index
+#: model:ir.model.fields,field_description:golf_club.field_res_partner__golf_handicap_index
+#: model:ir.model.fields,field_description:golf_club.field_res_users__golf_handicap_index
 #, python-format
 msgid "Handicap Index"
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.card
-#: model_terms:ir.ui.view,arch_db:golf.player
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.card
+#: model_terms:ir.ui.view,arch_db:golf_club.player
 msgid "Handicap:"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__has_message
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__has_message
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__has_message
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__has_message
 msgid "Has Message"
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.tournament
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.tournament
 msgid "Hcp"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_score__hole_id
-#: model_terms:ir.ui.view,arch_db:golf.card
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_score__hole_id
+#: model_terms:ir.ui.view,arch_db:golf_club.card
 msgid "Hole"
 msgstr "Hoyo"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_field__hole_count
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__hole_count
 msgid "Hole Count"
 msgstr "Hoyos"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_field__hole_ids
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__hole_ids
 msgid "Holes"
 msgstr "Hoyos"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__id
-#: model:ir.model.fields,field_description:golf.field_golf_cardstage__id
-#: model:ir.model.fields,field_description:golf.field_golf_field__id
-#: model:ir.model.fields,field_description:golf.field_golf_hole__id
-#: model:ir.model.fields,field_description:golf.field_golf_score__id
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__id
-#: model:ir.model.fields,field_description:golf.field_golf_tournament_mode__id
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__id
+#: model:ir.model.fields,field_description:golf_club.field_golf_cardstage__id
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__id
+#: model:ir.model.fields,field_description:golf_club.field_golf_hole__id
+#: model:ir.model.fields,field_description:golf_club.field_golf_score__id
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__id
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament_mode__id
 msgid "ID"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__activity_exception_icon
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__activity_exception_icon
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__activity_exception_icon
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__activity_exception_icon
 msgid "Icon"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,help:golf.field_golf_card__activity_exception_icon
-#: model:ir.model.fields,help:golf.field_golf_tournament__activity_exception_icon
+#. module: golf_club
+#: model:ir.model.fields,help:golf_club.field_golf_card__activity_exception_icon
+#: model:ir.model.fields,help:golf_club.field_golf_tournament__activity_exception_icon
 msgid "Icon to indicate an exception activity."
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,help:golf.field_golf_card__message_needaction
-#: model:ir.model.fields,help:golf.field_golf_card__message_unread
-#: model:ir.model.fields,help:golf.field_golf_tournament__message_needaction
-#: model:ir.model.fields,help:golf.field_golf_tournament__message_unread
+#. module: golf_club
+#: model:ir.model.fields,help:golf_club.field_golf_card__message_needaction
+#: model:ir.model.fields,help:golf_club.field_golf_card__message_unread
+#: model:ir.model.fields,help:golf_club.field_golf_tournament__message_needaction
+#: model:ir.model.fields,help:golf_club.field_golf_tournament__message_unread
 msgid "If checked, new messages require your attention."
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,help:golf.field_golf_card__message_has_error
-#: model:ir.model.fields,help:golf.field_golf_card__message_has_sms_error
-#: model:ir.model.fields,help:golf.field_golf_tournament__message_has_error
-#: model:ir.model.fields,help:golf.field_golf_tournament__message_has_sms_error
+#. module: golf_club
+#: model:ir.model.fields,help:golf_club.field_golf_card__message_has_error
+#: model:ir.model.fields,help:golf_club.field_golf_card__message_has_sms_error
+#: model:ir.model.fields,help:golf_club.field_golf_tournament__message_has_error
+#: model:ir.model.fields,help:golf_club.field_golf_tournament__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.res_config_settings_view_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.res_config_settings_view_form
 msgid "Importación"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__account_move_id
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__account_move_id
 msgid "Invoice"
 msgstr "Factura"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__message_is_follower
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__message_is_follower
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__message_is_follower
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__message_is_follower
 msgid "Is Follower"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__is_published
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__is_published
 msgid "Is Published"
 msgstr "Publicado"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_cardstage__is_closed
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_cardstage__is_closed
 msgid "Is a close stage"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_cardstage__is_default
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_cardstage__is_default
 msgid "Is a default stage"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_res_partner__golf_player
-#: model:ir.model.fields,field_description:golf.field_res_users__golf_player
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_res_partner__golf_player
+#: model:ir.model.fields,field_description:golf_club.field_res_users__golf_player
 msgid "Is a golf player"
 msgstr "es un Jugador"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_card.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_card__gross_score_last
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__gross_score_last
 #, python-format
 msgid "Last 9"
 msgstr "Ultimos 9"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card____last_update
-#: model:ir.model.fields,field_description:golf.field_golf_cardstage____last_update
-#: model:ir.model.fields,field_description:golf.field_golf_field____last_update
-#: model:ir.model.fields,field_description:golf.field_golf_hole____last_update
-#: model:ir.model.fields,field_description:golf.field_golf_score____last_update
-#: model:ir.model.fields,field_description:golf.field_golf_tournament____last_update
-#: model:ir.model.fields,field_description:golf.field_golf_tournament_mode____last_update
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card____last_update
+#: model:ir.model.fields,field_description:golf_club.field_golf_cardstage____last_update
+#: model:ir.model.fields,field_description:golf_club.field_golf_field____last_update
+#: model:ir.model.fields,field_description:golf_club.field_golf_hole____last_update
+#: model:ir.model.fields,field_description:golf_club.field_golf_score____last_update
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament____last_update
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament_mode____last_update
 msgid "Last Modified on"
 msgstr "Última modificación el"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__write_uid
-#: model:ir.model.fields,field_description:golf.field_golf_cardstage__write_uid
-#: model:ir.model.fields,field_description:golf.field_golf_field__write_uid
-#: model:ir.model.fields,field_description:golf.field_golf_hole__write_uid
-#: model:ir.model.fields,field_description:golf.field_golf_score__write_uid
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__write_uid
-#: model:ir.model.fields,field_description:golf.field_golf_tournament_mode__write_uid
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__write_uid
+#: model:ir.model.fields,field_description:golf_club.field_golf_cardstage__write_uid
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__write_uid
+#: model:ir.model.fields,field_description:golf_club.field_golf_hole__write_uid
+#: model:ir.model.fields,field_description:golf_club.field_golf_score__write_uid
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__write_uid
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament_mode__write_uid
 msgid "Last Updated by"
 msgstr "Ultima actualizacion por"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__write_date
-#: model:ir.model.fields,field_description:golf.field_golf_cardstage__write_date
-#: model:ir.model.fields,field_description:golf.field_golf_field__write_date
-#: model:ir.model.fields,field_description:golf.field_golf_hole__write_date
-#: model:ir.model.fields,field_description:golf.field_golf_score__write_date
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__write_date
-#: model:ir.model.fields,field_description:golf.field_golf_tournament_mode__write_date
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__write_date
+#: model:ir.model.fields,field_description:golf_club.field_golf_cardstage__write_date
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__write_date
+#: model:ir.model.fields,field_description:golf_club.field_golf_hole__write_date
+#: model:ir.model.fields,field_description:golf_club.field_golf_score__write_date
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__write_date
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament_mode__write_date
 msgid "Last Updated on"
 msgstr "Ultima actualizacion el"
 
-#. module: golf
-#: model:ir.actions.act_window,name:golf.action_golf_leaderboard_act_window
+#. module: golf_club
+#: model:ir.actions.act_window,name:golf_club.action_golf_leaderboard_act_window
 msgid "Leaderboard"
 msgstr "Resultados"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_hole.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_field__length
-#: model:ir.model.fields,field_description:golf.field_golf_hole__length
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__length
+#: model:ir.model.fields,field_description:golf_club.field_golf_hole__length
 #, python-format
 msgid "Length"
 msgstr "Distancia"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_card.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_card__player_license_active
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__player_license_active
 #, python-format
 msgid "License Active"
 msgstr "Matrícula Activa"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/res_partner.py:0
-#: model:ir.model.fields,field_description:golf.field_res_partner__golf_license_active
-#: model:ir.model.fields,field_description:golf.field_res_users__golf_license_active
+#: model:ir.model.fields,field_description:golf_club.field_res_partner__golf_license_active
+#: model:ir.model.fields,field_description:golf_club.field_res_users__golf_license_active
 #, python-format
 msgid "License is active"
 msgstr "Matricula Activa"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.card
-#: model_terms:ir.ui.view,arch_db:golf.player
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.card
+#: model_terms:ir.ui.view,arch_db:golf_club.player
 msgid "License:"
 msgstr "Matrícula"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.res_config_settings_view_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.res_config_settings_view_form
 msgid "Lista de precios socios"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields.selection,name:golf.selection__golf_card__stage__loaded
+#. module: golf_club
+#: model:ir.model.fields.selection,name:golf_club.selection__golf_card__stage__loaded
 msgid "Loaded"
 msgstr "Cargada"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__message_main_attachment_id
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__message_main_attachment_id
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__message_main_attachment_id
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__message_main_attachment_id
 msgid "Main Attachment"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__marker_id
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__marker_id
 msgid "Marker"
 msgstr "Marcador"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_partner_golf_filter
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_partner_golf_filter
 msgid "Matriculados"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_res_partner__golf_membership
-#: model:ir.model.fields,field_description:golf.field_res_users__golf_membership
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_res_partner__golf_membership
+#: model:ir.model.fields,field_description:golf_club.field_res_users__golf_membership
 msgid "Membership"
 msgstr "Membresía"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.res_config_settings_view_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.res_config_settings_view_form
 msgid "Membresía"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__message_has_error
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__message_has_error
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__message_has_error
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__message_has_error
 msgid "Message Delivery error"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__message_ids
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__message_ids
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__message_ids
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__message_ids
 msgid "Messages"
 msgstr ""
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_tournament.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__tournament_mode_id
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__tournament_mode_id
 #, python-format
 msgid "Mode"
 msgstr "Modo"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__my_activity_date_deadline
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__my_activity_date_deadline
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__my_activity_date_deadline
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__my_activity_date_deadline
 msgid "My Activity Deadline"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__name
-#: model:ir.model.fields,field_description:golf.field_golf_cardstage__name
-#: model:ir.model.fields,field_description:golf.field_golf_field__name
-#: model:ir.model.fields,field_description:golf.field_golf_hole__name
-#: model:ir.model.fields,field_description:golf.field_golf_score__name
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__name
-#: model:ir.model.fields,field_description:golf.field_golf_tournament_mode__name
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__name
+#: model:ir.model.fields,field_description:golf_club.field_golf_cardstage__name
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__name
+#: model:ir.model.fields,field_description:golf_club.field_golf_hole__name
+#: model:ir.model.fields,field_description:golf_club.field_golf_score__name
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__name
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament_mode__name
 msgid "Name"
 msgstr "Nombre"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.portal_my_golfcards
-#: model_terms:ir.ui.view,arch_db:golf.tournament
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.portal_my_golfcards
+#: model_terms:ir.ui.view,arch_db:golf_club.tournament
 msgid "Net"
 msgstr "Neto"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__net_score
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__net_score
 msgid "Net Score"
 msgstr "Neto"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_card.py:0
 #: code:addons/golf/models/golf_card.py:0
 #: code:addons/golf/models/golf_card.py:0
@@ -877,272 +878,272 @@ msgstr "Neto"
 #: code:addons/golf/models/golf_tournament.py:0
 #: code:addons/golf/models/golf_tournament.py:0
 #: code:addons/golf/models/golf_tournament.py:0
-#: model:ir.model.fields.selection,name:golf.selection__golf_card__stage__new
-#: model:ir.model.fields.selection,name:golf.selection__golf_tournament__state__new
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_search
+#: model:ir.model.fields.selection,name:golf_club.selection__golf_card__stage__new
+#: model:ir.model.fields.selection,name:golf_club.selection__golf_tournament__state__new
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_search
 #, python-format
 msgid "New"
 msgstr "Nuevo"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__activity_date_deadline
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__activity_date_deadline
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__activity_date_deadline
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__activity_date_deadline
 msgid "Next Activity Deadline"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__activity_summary
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__activity_summary
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__activity_summary
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__activity_summary
 msgid "Next Activity Summary"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__activity_type_id
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__activity_type_id
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__activity_type_id
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__activity_type_id
 msgid "Next Activity Type"
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_partner_golf_filter
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_partner_golf_filter
 msgid "No Matriculados"
 msgstr ""
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_tournament.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__notes
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_form
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__notes
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_form
 #, python-format
 msgid "Notes"
 msgstr "Notas"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_hole__number
-#: model:ir.model.fields,field_description:golf.field_golf_score__hole_number
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_hole__number
+#: model:ir.model.fields,field_description:golf_club.field_golf_score__hole_number
 msgid "Number"
 msgstr "Número"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__message_needaction_counter
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__message_needaction_counter
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__message_needaction_counter
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__message_needaction_counter
 msgid "Number of Actions"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__message_has_error_counter
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__message_has_error_counter
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__message_has_error_counter
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__message_has_error_counter
 msgid "Number of errors"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,help:golf.field_golf_card__message_needaction_counter
-#: model:ir.model.fields,help:golf.field_golf_tournament__message_needaction_counter
+#. module: golf_club
+#: model:ir.model.fields,help:golf_club.field_golf_card__message_needaction_counter
+#: model:ir.model.fields,help:golf_club.field_golf_tournament__message_needaction_counter
 msgid "Number of messages which requires an action"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,help:golf.field_golf_card__message_has_error_counter
-#: model:ir.model.fields,help:golf.field_golf_tournament__message_has_error_counter
+#. module: golf_club
+#: model:ir.model.fields,help:golf_club.field_golf_card__message_has_error_counter
+#: model:ir.model.fields,help:golf_club.field_golf_tournament__message_has_error_counter
 msgid "Number of messages with delivery error"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,help:golf.field_golf_card__message_unread_counter
-#: model:ir.model.fields,help:golf.field_golf_tournament__message_unread_counter
+#. module: golf_club
+#: model:ir.model.fields,help:golf_club.field_golf_card__message_unread_counter
+#: model:ir.model.fields,help:golf_club.field_golf_tournament__message_unread_counter
 msgid "Number of unread messages"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_field__par
-#: model:ir.model.fields,field_description:golf.field_golf_hole__par
-#: model_terms:ir.ui.view,arch_db:golf.card
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__par
+#: model:ir.model.fields,field_description:golf_club.field_golf_hole__par
+#: model_terms:ir.ui.view,arch_db:golf_club.card
 msgid "Par"
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.res_config_settings_view_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.res_config_settings_view_form
 msgid "Para los torneos importados"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__parent_id
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__parent_id
 msgid "Parent"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__player_id
-#: model_terms:ir.ui.view,arch_db:golf.tournament
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__player_id
+#: model_terms:ir.ui.view,arch_db:golf_club.tournament
 msgid "Player"
 msgstr "Jugador"
 
-#. module: golf
-#: model:ir.actions.act_window,name:golf.action_golf_player_act_window
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__player_ids
-#: model:ir.ui.menu,name:golf.menu_golf_players
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_form
+#. module: golf_club
+#: model:ir.actions.act_window,name:golf_club.action_golf_player_act_window
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__player_ids
+#: model:ir.ui.menu,name:golf_club.menu_golf_players
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_form
 msgid "Players"
 msgstr "Jugadores"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.tournament
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_card_leaderboard
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.tournament
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_card_leaderboard
 msgid "Pos"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__position
-#: model_terms:ir.ui.view,arch_db:golf.portal_my_golfcards
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__position
+#: model_terms:ir.ui.view,arch_db:golf_club.portal_my_golfcards
 msgid "Position"
 msgstr "Posición"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__position_label
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__position_label
 msgid "Position Label"
 msgstr "Etiqueta"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__position_tied
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__position_tied
 msgid "Position Tied"
 msgstr "Empatado"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_form
 msgid "Post"
 msgstr "Publicar"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_tournament.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_card__posted
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__posted
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_search
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__posted
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__posted
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_search
 #, python-format
 msgid "Posted"
 msgstr "Publicado"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_card_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_card_form
 msgid "Presentada"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields.selection,name:golf.selection__golf_card__stage__presented
+#. module: golf_club
+#: model:ir.model.fields.selection,name:golf_club.selection__golf_card__stage__presented
 msgid "Presented"
 msgstr "Presentada"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.res_config_settings_view_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.res_config_settings_view_form
 msgid "Productos"
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_form
 msgid "Relations"
 msgstr "Relaciones"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.res_config_settings_view_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.res_config_settings_view_form
 msgid "Responsabilid AFIP"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__activity_user_id
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__activity_user_id
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__activity_user_id
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__activity_user_id
 msgid "Responsible User"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__message_has_sms_error
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__message_has_sms_error
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__message_has_sms_error
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__message_has_sms_error
 msgid "SMS Delivery error"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_score__score
-#: model_terms:ir.ui.view,arch_db:golf.card
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_score__score
+#: model_terms:ir.ui.view,arch_db:golf_club.card
 msgid "Score"
 msgstr "Puntaje"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_card.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_card__score_ids
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__score_ids
 #, python-format
 msgid "Scores"
 msgstr "Puntajes"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.tournaments
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.tournaments
 msgid "Select one to see details"
 msgstr "Seleccione uno para ver el detalle"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.res_config_settings_view_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.res_config_settings_view_form
 msgid "Semanal"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_cardstage__sequence
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_cardstage__sequence
 msgid "Sequence"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,help:golf.field_golf_cardstage__is_closed
+#. module: golf_club
+#: model:ir.model.fields,help:golf_club.field_golf_cardstage__is_closed
 msgid "Services in this stage are considered as closed."
 msgstr ""
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_field.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_field__slope_rating_back
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__slope_rating_back
 #, python-format
 msgid "Slope Rating Back"
 msgstr "Slope Rating Vuelta"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_field.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_field__slope_rating_front
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__slope_rating_front
 #, python-format
 msgid "Slope Rating Front"
 msgstr "Slope Rating Ida"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_field.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_field__slope_rating_total
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__slope_rating_total
 #, python-format
 msgid "Slope Rating Total"
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_partner_golf_filter
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_partner_golf_filter
 msgid "Socios"
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.actions.act_window,help:golf.action_golf_card_act_window
-#: model_terms:ir.actions.act_window,help:golf.action_golf_cards_related
-#: model_terms:ir.actions.act_window,help:golf.action_golf_field_act_window
-#: model_terms:ir.actions.act_window,help:golf.action_golf_tournament_act_window
+#. module: golf_club
+#: model_terms:ir.actions.act_window,help:golf_club.action_golf_card_act_window
+#: model_terms:ir.actions.act_window,help:golf_club.action_golf_cards_related
+#: model_terms:ir.actions.act_window,help:golf_club.action_golf_field_act_window
+#: model_terms:ir.actions.act_window,help:golf_club.action_golf_tournament_act_window
 msgid "Something about"
 msgstr "Algo"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__stage
-#: model:ir.model.fields,field_description:golf.field_golf_card__stage_id
-#: model_terms:ir.ui.view,arch_db:golf.golf_cardstage_form_view
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__stage
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__stage_id
+#: model_terms:ir.ui.view,arch_db:golf_club.golf_cardstage_form_view
 msgid "Stage"
 msgstr "Etapa"
 
-#. module: golf
-#: model:ir.actions.act_window,name:golf.action_golf_cardstage_act_window
-#: model_terms:ir.ui.view,arch_db:golf.golf_cardstage_tree_view
+#. module: golf_club
+#: model:ir.actions.act_window,name:golf_club.action_golf_cardstage_act_window
+#: model_terms:ir.ui.view,arch_db:golf_club.golf_cardstage_tree_view
 msgid "Stages"
 msgstr "Etapas"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__state
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__state
 msgid "Status"
 msgstr "Estado"
 
-#. module: golf
-#: model:ir.model.fields,help:golf.field_golf_card__activity_state
-#: model:ir.model.fields,help:golf.field_golf_tournament__activity_state
+#. module: golf_club
+#: model:ir.model.fields,help:golf_club.field_golf_card__activity_state
+#: model:ir.model.fields,help:golf_club.field_golf_tournament__activity_state
 msgid ""
 "Status based on activities\n"
 "Overdue: Due date is already passed\n"
@@ -1150,231 +1151,231 @@ msgid ""
 "Planned: Future activities."
 msgstr ""
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_field.py:0
-#: model:ir.model.fields,field_description:golf.field_golf_field__tee_color
+#: model:ir.model.fields,field_description:golf_club.field_golf_field__tee_color
 #, python-format
 msgid "Tee color"
 msgstr "Color del Tee"
 
-#. module: golf
-#: model:ir.model.fields,help:golf.field_golf_tournament__website_url
+#. module: golf_club
+#: model:ir.model.fields,help:golf_club.field_golf_tournament__website_url
 msgid "The full URL to access the document through the website."
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.portal_my_golfcards
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.portal_my_golfcards
 msgid "There are currently no golf cards for your account."
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.res_config_settings_view_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.res_config_settings_view_form
 msgid "Tipo de documento"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__tournament_id
-#: model_terms:ir.ui.view,arch_db:golf.portal_my_golfcards
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__tournament_id
+#: model_terms:ir.ui.view,arch_db:golf_club.portal_my_golfcards
 msgid "Tournament"
 msgstr "Torneo"
 
-#. module: golf
-#: model:ir.model,name:golf.model_golf_tournament_mode
+#. module: golf_club
+#: model:ir.model,name:golf_club.model_golf_tournament_mode
 msgid "Tournament Mode"
 msgstr "Modo"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_tournament.py:0
 #, python-format
 msgid "Tournament activated"
 msgstr "Torneo activado"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_tournament.py:0
 #, python-format
 msgid "Tournament cancelled"
 msgstr "Torneo cancelado"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_tournament.py:0
 #, python-format
 msgid "Tournament finished"
 msgstr "Torneo cerrado"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_tournament.py:0
 #, python-format
 msgid "Tournament posted"
 msgstr "Torneo publicado"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/res_config_settings.py:0
-#: model:ir.model.fields,field_description:golf.field_res_config_settings__golf_tournament_product
+#: model:ir.model.fields,field_description:golf_club.field_res_config_settings__golf_tournament_product
 #, python-format
 msgid "Tournament product"
 msgstr "Producto de torneo"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/res_config_settings.py:0
-#: model:ir.model.fields,field_description:golf.field_res_config_settings__golf_tournament_product_weekend
+#: model:ir.model.fields,field_description:golf_club.field_res_config_settings__golf_tournament_product_weekend
 #, python-format
 msgid "Tournament product weekend"
 msgstr "Producto de torneo fin de semana"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/website.py:0
-#: model:ir.actions.act_window,name:golf.action_golf_tournament_act_window
-#: model:ir.ui.menu,name:golf.menu_golf_tournament
-#: model_terms:ir.ui.view,arch_db:golf.tournaments
+#: model:ir.actions.act_window,name:golf_club.action_golf_tournament_act_window
+#: model:ir.ui.menu,name:golf_club.menu_golf_tournament
+#: model_terms:ir.ui.view,arch_db:golf_club.tournaments
 #, python-format
 msgid "Tournaments"
 msgstr "Torneos"
 
-#. module: golf
-#: model:ir.model.fields,help:golf.field_golf_card__activity_exception_decoration
-#: model:ir.model.fields,help:golf.field_golf_tournament__activity_exception_decoration
+#. module: golf_club
+#: model:ir.model.fields,help:golf_club.field_golf_card__activity_exception_decoration
+#: model:ir.model.fields,help:golf_club.field_golf_tournament__activity_exception_decoration
 msgid "Type of the exception activity on record."
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_search
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_search
 msgid "Unposted"
 msgstr "No publicado"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__message_unread
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__message_unread
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__message_unread
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__message_unread
 msgid "Unread Messages"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__message_unread_counter
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__message_unread_counter
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__message_unread_counter
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__message_unread_counter
 msgid "Unread Messages Counter"
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.golf_partner_fields
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.golf_partner_fields
 msgid "Update"
 msgstr "Actualizar"
 
-#. module: golf
-#: model:ir.actions.server,name:golf.golf_update_handicap_action
+#. module: golf_club
+#: model:ir.actions.server,name:golf_club.golf_update_handicap_action
 msgid "Update handicap from AAG"
 msgstr "Actualizar handicap desde la AAG"
 
-#. module: golf
-#: model:ir.actions.server,name:golf.golf_update_pricelist_action
+#. module: golf_club
+#: model:ir.actions.server,name:golf_club.golf_update_pricelist_action
 msgid "Update members pricelist"
 msgstr "Actualizar listas de precio"
 
-#. module: golf
-#: model:ir.model.fields,help:golf.field_golf_cardstage__custom_color
+#. module: golf_club
+#: model:ir.model.fields,help:golf_club.field_golf_cardstage__custom_color
 msgid "Use Hex Code only Ex:-#FFFFFF"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,help:golf.field_golf_cardstage__is_default
+#. module: golf_club
+#: model:ir.model.fields,help:golf_club.field_golf_cardstage__is_default
 msgid "Used a default stage"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,help:golf.field_golf_cardstage__sequence
+#. module: golf_club
+#: model:ir.model.fields,help:golf_club.field_golf_cardstage__sequence
 msgid "Used to order stages. Lower is better."
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__website_published
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__website_published
 msgid "Visible on current website"
 msgstr ""
 
-#. module: golf
-#: model:ir.model,name:golf.model_website
+#. module: golf_club
+#: model:ir.model,name:golf_club.model_website
 msgid "Website"
 msgstr "Sitio web"
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_card__website_message_ids
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__website_message_ids
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_card__website_message_ids
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__website_message_ids
 msgid "Website Messages"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,field_description:golf.field_golf_tournament__website_url
+#. module: golf_club
+#: model:ir.model.fields,field_description:golf_club.field_golf_tournament__website_url
 msgid "Website URL"
 msgstr ""
 
-#. module: golf
-#: model:ir.model.fields,help:golf.field_golf_card__website_message_ids
-#: model:ir.model.fields,help:golf.field_golf_tournament__website_message_ids
+#. module: golf_club
+#: model:ir.model.fields,help:golf_club.field_golf_card__website_message_ids
+#: model:ir.model.fields,help:golf_club.field_golf_tournament__website_message_ids
 msgid "Website communication history"
 msgstr ""
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_card.py:0
 #, python-format
 msgid "You must create an golf stage first."
 msgstr "Debe crear una etapa primero"
 
-#. module: golf
+#. module: golf_club
 #: code:addons/golf/models/golf_card.py:0
 #, python-format
 msgid "You must create an golf tournament first."
 msgstr "Debe crear un torneo primero"
 
-#. module: golf
-#: model:ir.model,name:golf.model_golf_card
+#. module: golf_club
+#: model:ir.model,name:golf_club.model_golf_card
 msgid "a golf card"
 msgstr "una tarjeta"
 
-#. module: golf
-#: model:ir.model,name:golf.model_golf_field
+#. module: golf_club
+#: model:ir.model,name:golf_club.model_golf_field
 msgid "a golf field"
 msgstr "un campo"
 
-#. module: golf
-#: model:ir.model,name:golf.model_golf_score
+#. module: golf_club
+#: model:ir.model,name:golf_club.model_golf_score
 msgid "a golf hole score"
 msgstr "el score en un hoyo"
 
-#. module: golf
-#: model:ir.model,name:golf.model_golf_tournament
+#. module: golf_club
+#: model:ir.model,name:golf_club.model_golf_tournament
 msgid "a golf tournament"
 msgstr "un torneo"
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_card_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_card_form
 msgid "code"
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_score_tree
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_score_tree
 msgid "golf_score_tree"
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_card_form
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_field_form
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_card_form
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_field_form
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_form
 msgid "model_form"
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_field_search
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_search
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_field_search
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_search
 msgid "model_search"
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_card_leaderboard
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_card_tree
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_field_tree
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_tree
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_card_leaderboard
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_card_tree
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_field_tree
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_tree
 msgid "model_tree"
 msgstr ""
 
-#. module: golf
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_field_form
-#: model_terms:ir.ui.view,arch_db:golf.view_golf_tournament_form
+#. module: golf_club
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_field_form
+#: model_terms:ir.ui.view,arch_db:golf_club.view_golf_tournament_form
 msgid "name"
 msgstr "nombre"
