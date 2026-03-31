@@ -1,6 +1,6 @@
 <odoo>
 
-    
+
     <!-- list view for "model" -->
     <record id="view_golf_card_list" model="ir.ui.view">
         <field name="name">view.golf.card.list</field>
@@ -23,9 +23,9 @@
                 <field name="gross_score" />
                 <field name="player_handicap" />
                 <field name="net_score" />
-                <field name="position_label" class="text-center"/>
+                <field name="position_label" class="text-center" />
                 <field name="marker_id" />
-                
+
 
             </list>
         </field>
@@ -62,24 +62,38 @@
                 </header>
                 <sheet>
                     <div class="oe_button_box" name="button_box">
-                        <button class="oe_stat_button" type="object" invisible="account_move_id==False" name="action_view_invoice" icon="fa-file" context="{'card_id': active_id}">
-                            <div class="o_field_widget o_stat_info">
-                                <span class="o_span_text">Invoice</span>
+                        <button class="oe_stat_button"
+                            type="object"
+                            invisible="account_move_id"
+                            name="action_view_invoice"
+                            icon="fa-file"
+                            context="{'card_id': id}"> <!-- CAMBIO AQUÍ: active_id -> id -->
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Invoice</span>
                             </div>
                         </button>
-                        <button class="oe_stat_button" type="object" invisible="account_move_id != False" name="action_golf_card_invoice" icon="fa-file" context="{'card_id': active_id}">
-                            <div class="o_field_widget o_stat_info">
-                                <span class="o_span_text">Create Invoice</span>
+
+                        <button class="oe_stat_button"
+                            type="object"
+                            invisible="not account_move_id"
+                            name="action_golf_card_invoice"
+                            icon="fa-file"
+                            context="{'card_id': id}"> <!-- CAMBIO AQUÍ: active_id -> id -->
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Create Invoice</span>
                             </div>
                         </button>
                     </div>
+
                     <div class="oe_title">
                         <label for="player_id" class="oe_edit_only" />
                         <h1>
 
                             <field name="player_id" class="oe_inline" />
                             <field name="position" class="oe_inline" invisible="1" />
-                            <field name="position_label" widget="badge" readonly="1" invisible="position ==0" decoration-success="position == 1" decoration-warning="position in (2,3,4)" decoration-info="position > 4" />
+                            <field name="position_label" widget="badge" readonly="1" invisible="position ==0"
+                                decoration-success="position == 1" decoration-warning="position in (2,3,4)"
+                                decoration-info="position > 4" />
 
                         </h1>
                     </div>
@@ -108,18 +122,18 @@
                         <group class="oe_subtotal_footer oe_right golf-card-totals">
                             <field name="gross_score_first" invisible="1" />
                             <field name="gross_score_last" invisible="1" />
-                            <field name="gross_score"  class="golf-card-subtotal" readonly="1" />
+                            <field name="gross_score" class="golf-card-subtotal" readonly="1" />
                             <field name="player_handicap" class="golf-card-subtotal" />
                             <field name="net_score" class="oe_subtotal_footer_separator" readonly="1" />
                         </group>
-                        
+
                     </group>
-                    
+
                 </sheet>
                 <div class="oe_chatter">
-                    <field name="message_follower_ids"/>
-                    <field name="activity_ids"/>
-                    <field name="message_ids" options="{'post_refresh': 'recipients'}"/>
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" options="{'post_refresh': 'recipients'}" />
                 </div>
             </form>
         </field>
@@ -151,11 +165,11 @@
         <field name="search_view_id" ref="view_golf_card_search" />
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
-            Click to add new golf card
-        </p>
+                Click to add new golf card
+            </p>
             <p>
-            Something about 
-        </p>
+                Something about
+            </p>
         </field>
     </record>
 
@@ -170,11 +184,11 @@
 
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
-            Click to add new golf card
-        </p>
+                Click to add new golf card
+            </p>
             <p>
-            Something about 
-        </p>
+                Something about
+            </p>
         </field>
     </record>
 

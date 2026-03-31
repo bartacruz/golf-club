@@ -27,7 +27,6 @@
         'views/golf_card.xml',
         'views/golf_player.xml',
         'views/golf_tournament.xml',
-        'views/golf_cardstage.xml',
         'views/res_config_settings.xml',
         'views/res_partner.xml',
         'views/menu.xml',
@@ -42,14 +41,14 @@
 #    'images': ['static/description/golf-icon.png'],
     'assets': {
         'web.assets_backend': [
-            'golf/static/src/js/golf_card_widget.js',
-            'golf/static/src/css/golf.scss',
+            'golf_club/static/src/js/golf_card_widget.js',
+            'golf_club/static/src/css/golf.scss',
         ],
         'web.report_assets_common': [
-            'golf/static/src/css/card.scss',
+            'golf_club/static/src/css/card.scss',
         ],
         'web.assets_frontend': [
-            'golf/static/src/css/golf.scss',
+            'golf_club/static/src/css/golf.scss',
         ],
     },
     'maintainers': ['bartacruz'],

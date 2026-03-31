@@ -6,13 +6,13 @@
         <field name="arch" type="xml">
             <div name="button_box" position="inside">
 
-                <button class="oe_stat_button" type="object" attrs="{'invisible': [('golf_card_count', '=', 0)]}" name="action_open_golf_cards" icon="fa-id-card" context="{'player_id': active_id}">
+                <button class="oe_stat_button" type="object" invisible="golf_card_count==0" name="action_open_golf_cards" icon="fa-id-card" context="{'player_id': id}">
                     <field string="Cards" name="golf_card_count" widget="statinfo" />
                 </button>
             </div>
-            <xpath expr="//div[hasclass('oe_title')]/h1" position="after">
+            <!-- <xpath expr="//div[hasclass('oe_title')]/h1" position="after">
                 <field name="golf_membership" readonly="1" widget="many2many_tags" />
-            </xpath>
+            </xpath> -->
             <page name="contact_addresses" position="before">
                 <page string="Golf" autofocus="autofocus">
                     <group>
@@ -24,7 +24,7 @@
                         </group>
                         <group>
                             <field name="golf_handicap" />
-                            <button string="Update" class="oe_highlight" type="object" attrs="{'invisible': [('golf_license', '=', False)]}" name="action_update_handicap" context="{'player_id': active_id}"></button>
+                            <button string="Update" class="oe_highlight" type="object" invisible="not golf_license" name="action_update_handicap" context="{'player_id': id}"></button>
                             <field name="golf_handicap_index" />
                         </group>
                     </group>
@@ -80,7 +80,7 @@
         <field name="code">action = records.action_update_pricelist()</field>
     </record>
     <template id="portal_docs_entry" name="My Portal Docs Entry" inherit_id="portal.portal_docs_entry">
-        <a t-att-href="url" t-att-title="title" class="list-group-item list-group-item-action d-flex align-items-center justify-content-between" position="replace">
+        <a t-att-href="url" t-att-title="title" position="replace">
             <a t-if="placeholder_count != '0'" class="col-5 align-items-center justify-content-between" t-att-href="url" t-att-title="title">
                 <div class="pepe bg-info h-100 p-4 text-center justify-content-between">
                     <t t-if='count'>
@@ -96,7 +96,7 @@
             </a>
         </a>
     </template>
-    <template id="portal_my_home" name="My Portal" inherit_id="portal.portal_my_home">
+    <!-- <template id="portal_my_home" name="My Portal" inherit_id="portal.portal_my_home">
         <div class="o_portal_my_home" position="replace">
             <div class="o_portal_my_home">
                 <div class="oe_structure" id="oe_structure_portal_my_home_1" />
@@ -105,5 +105,5 @@
             </div>
         </div>
         <div class="oe_structure" id="oe_structure_portal_my_home_2" />
-    </template>
+    </template> -->
 </odoo>

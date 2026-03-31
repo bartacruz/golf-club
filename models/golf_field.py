@@ -25,16 +25,15 @@ class GolfField(models.Model):
     course_rating_total = fields.Float(string=_("Course Rating Total"),digits=(4,2))
     
     hole_ids = fields.One2many("golf.hole",'field_id', 'Holes')
-    hole_count = fields.Integer(compute='_compute_hole_count')
-    par = fields.Integer()
-    length = fields.Integer()
+    hole_count = fields.Integer(compute='_calculate_data', store=True)
+    par = fields.Integer(compute="_calculate_data",store=True)
+    length = fields.Integer(compute="_calculate_data",store=True)
 
-    def _compute_hole_count(self):
-        for record in self:
-            record.hole_count = len(record.hole_ids)
             
-    @api.onchange("hole_ids")
+    @api.depends("hole_ids.par","hole_ids.length")
     def _calculate_data(self):
-        self.par = sum(c.par for c in self.hole_ids)
-        self.length = sum(c.length for c in self.hole_ids)
-    
+        for record in self:
+            record.par = sum(c.par for c in record.hole_ids)
+            record.length = sum(c.length for c in record.hole_ids)
+            record.hole_count = len(record.hole_ids)
+

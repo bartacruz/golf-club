@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="golf_player_tree" model="ir.ui.view">
-        <field name="name">golf.player.tree</field>
+    <record id="golf_player_list" model="ir.ui.view">
+        <field name="name">golf.player.list</field>
         <field name="model">res.partner</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name" />
                 <field name="golf_license" />
                 <field name="golf_handicap_index" />
                 <field name="golf_handicap" />
                 <field name="golf_membership" />
-            </tree>
+            </list>
         </field>
     </record>
     <record id="golf_player_view_kanban" model="ir.ui.view">
@@ -101,11 +101,11 @@
     <record id="action_golf_player_act_window" model="ir.actions.act_window">
         <field name="name">Players</field>
         <field name="res_model">res.partner</field>
-        <field name="view_mode">kanban,tree,form</field>
-        <field name="view_id" ref="golf_player_tree" />
+        <field name="view_mode">kanban,list,form</field>
+        <field name="view_id" ref="golf_player_list" />
         <field name="view_ids" eval="[(5, 0, 0),
                         (0, 0, {'view_mode': 'kanban', 'view_id': ref('golf_player_view_kanban') }),
-                        (0, 0, {'view_mode': 'tree','view_id': ref('golf_player_tree') }),
+                        (0, 0, {'view_mode': 'list','view_id': ref('golf_player_list') }),
                         (0, 0, {'view_mode': 'form' }),
                     ]" />
         <field name="domain">[('golf_player', '=', True)]</field>

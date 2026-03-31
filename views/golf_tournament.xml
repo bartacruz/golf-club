@@ -12,16 +12,12 @@
     - Action help···: Something about model
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
-    <!-- Tree view for "model" -->
-    <record id="view_golf_tournament_tree" model="ir.ui.view">
-        <field name="name">view.golf.tournament.tree</field>
+    <!-- list view for "model" -->
+    <record id="view_golf_tournament_list" model="ir.ui.view">
+        <field name="name">view.golf.tournament.list</field>
         <field name="model">golf.tournament</field>
-        <field name="type">tree</field>
-        <field name="mode">primary</field>
-        <field name="priority" eval="16" />
-        <field name="active" eval="True" />
         <field name="arch" type="xml">
-            <tree string="model_tree" create="true" delete="true" edit="true" default_order="date desc">
+            <list string="model_list" create="true" delete="true" edit="true" default_order="date desc">
                 <field name="date" />
                 <field name="name" />
                 <field name="category" />
@@ -31,12 +27,11 @@
                 <field name="card_count" />
                 <field name="parent_id" />
                 <field name="state" widget="badge" decoration-info="state == 'new'" decoration-success="state == 'finished'" decoration-warning="state == 'active'"/>
-
                 <field name="posted" />
                 <field name="external_reference" />
                 <field name="website_published" />
                 
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -47,11 +42,11 @@
         <field name="arch" type="xml">
             <form string="model_form" create="true" delete="true" edit="true">
                 <header>
-                    <button name="fetch_tournament" string="Fetch" type="object" class="oe_highlight" attrs="{'invisible' : [('external_reference','=','False')]}"/>
-                    <button name="post_external" string="Post" type="object" class="oe_highlight" attrs="{'invisible' : ['|',('posted','=',True),('state','!=','finished')]}"/>
-                    <button name="action_activate" string="Activate" type="object"  attrs="{'invisible' : [('state','!=','new')]}"/>
-                    <button name="action_finish" string="Finish" type="object"  attrs="{'invisible' : [('state','in',['finished','cancelled'])]}"/>
-                    <button name="action_cancel" string="Cancel" type="object"  attrs="{'invisible' : [('state','in',['finished','cancelled'])]}"/>
+                    <button name="fetch_tournament" string="Fetch" type="object" class="oe_highlight" invisible="not external_reference"/>
+                    <button name="post_external" string="Post" type="object" class="oe_highlight" invisible="posted or state !='finished'"/>
+                    <button name="action_activate" string="Activate" type="object" invisible="state !='new'"/>
+                    <button name="action_finish" string="Finish" type="object"  invisible="state in ['finished','cancelled']"/>
+                    <button name="action_cancel" string="Cancel" type="object"  invisible="state in ['finished','cancelled']"/>
                     <button name="action_leaderboard" string="Calculate" type="object" />
                     <field name="state" widget="statusbar"/>
 
@@ -65,7 +60,7 @@
                         <button class="oe_stat_button" type="action" name="%(action_golf_cards_related)d" icon="fa-id-card">
                             <field string="Cards" name="card_count" widget="statinfo" />
                         </button>
-                        <button class="oe_stat_button" type="object" attrs="{'invisible': [('active_card_count', '=', 0)]}" name="action_open_leaderboard" icon="fa-trophy" context="{'tournament_id': active_id}">
+                        <button class="oe_stat_button" type="object" invisible="active_card_count == 0" name="action_open_leaderboard" icon="fa-trophy" context="{'tournament_id': id}">
                             <span class="o_stat_text">Leaderboard</span>
                         </button>
                     </div>
@@ -95,11 +90,11 @@
                     <notebook>
                         <page string="Players">
                             <field name="player_ids" widget="many2many">
-                                <tree>
+                                <list>
                                     <field name="name" />
                                     <field name="golf_handicap" />
                                     <field name="phone" />
-                                </tree>
+                                </list>
                             </field>
                         </page>
                         <page string="Relations">
@@ -153,7 +148,7 @@
     <record id="action_golf_tournament_act_window" model="ir.actions.act_window">
         <field name="name">Tournaments</field>
         <field name="res_model">golf.tournament</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="search_view_id" ref="view_golf_tournament_search" />
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
@@ -178,9 +173,9 @@
     </record>
     <record id="golf_tournament_toggle_website_published" model="ir.actions.server">
         <field name="name">Toggle website published</field>
-        <field name="binding_model_id" ref="golf.model_golf_tournament" />
+        <field name="binding_model_id" ref="golf_club.model_golf_tournament" />
         <field name="binding_view_types">list,form</field>
-        <field name="model_id" ref="golf.model_golf_tournament" />
+        <field name="model_id" ref="golf_club.model_golf_tournament" />
         <field name="state">code</field>
         <field name="code">action = records.action_toggle_website_published()</field>
     </record>

@@ -16,13 +16,14 @@ course_par = 68
 
 def get_auth():
     auth_string = '%s:%s' % (user,key)
-    #print(auth_string)
+    print("auth_string",auth_string)
     auth = '%s %s' % ('Basic', base64.b64encode(auth_string.encode('ascii')).decode('ascii'))
-    #print(auth)
+    print("auth",auth)
     return auth
 
 def do_get(action, data=None):
     rurl = '%s%s' % (root_api,action)
+    print("rurl",rurl)
     auth = get_auth()
     if data:
         r = requests.get(rurl,params=data,headers={'Authorization':auth})    
