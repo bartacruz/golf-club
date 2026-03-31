@@ -11,7 +11,7 @@
                 <field name="category" />
                 <field name="start_handicap" />
                 <field name="end_handicap" />
-                <field name="field_id" />
+                <field name="field_ids" />
                 <field name="card_count" />
                 <field name="parent_id" />
                 <field name="state" widget="badge" decoration-info="state == 'new'" decoration-success="state == 'finished'" decoration-warning="state == 'active'"/>
@@ -65,7 +65,7 @@
                             <field name="website_published" />
                         </group>
                         <group>
-                            <field name="field_id" options="{'no_create_edit': True}"></field>
+                            <field name="field_ids" options="{'color_field':'color','no_create_edit': True}" widget="many2many_tags"></field>
                             <field name="tournament_mode_id" options="{'no_create_edit': True}" />
                             <field name="category" />
                             <field name="start_handicap" />

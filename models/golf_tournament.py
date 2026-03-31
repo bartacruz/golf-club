@@ -33,10 +33,10 @@ class GolfTournament(models.Model):
         string=_('Fields'),
         comodel_name='golf.field',
     )
-    field_id = fields.Many2one(
-        string=_('Field'),
-        comodel_name='golf.field',
-    )
+    # field_id = fields.Many2one(
+    #     string=_('Field'),
+    #     comodel_name='golf.field',
+    # )
 
     notes = fields.Text(_("Notes"))
 
@@ -98,7 +98,7 @@ class GolfTournament(models.Model):
         for rec in self:
             rec.card_count = len(rec.card_ids)
             rec.active_card_count = len([x for x in rec.card_ids if x.net_score > 0])
-            rec.player_ids = rec.mapped("card_ids.player_id")
+            rec.player_ids |= rec.mapped("card_ids.player_id")
     
     def _check_name(self):
         for record in self:

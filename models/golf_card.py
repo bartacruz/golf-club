@@ -85,25 +85,27 @@ class GolfCard(models.Model):
             raise ValidationError(
                 _("You must create an golf tournament first."))
                     
-    def _calculate_handicap(self,field, player):
+    def _calculate_handicap(self,fields, player):
         if player.golf_handicap_index > 0:
-            handicap = round(
-                player.golf_handicap_index * (field.slope_rating_total/113)
-                + (field.course_rating_total-field.par)
-            )
+            hcp = player.golf_handicap_index
+            slope_rating = sum(fields.mapped("slope_rating_total")) /len(fields)
+            course_rating = sum(fields.mapped("course_rating_total"))
+            field_par = sum(fields.mapped("par"))
+            handicap = round(hcp * (slope_rating/113) + course_rating-field_par)
         else:
             handicap = player.golf_handicap
         
-        if len(field.hole_ids) == 9:
-            higher = field.hole_ids.search_count([('handicap', '=', 1)])
-            if higher:
-                handicap = math.ceil(handicap/2)
-            else:
-                handicap = math.floor(handicap/2)
+        # TODO: revisar esto porque en algunos clubes toman el handicap de la vuelta con el handcap 1
+        # if sum(fields.mapped('hole_count')) == 9:
+        #     higher = field.hole_ids.search_count([('handicap', '=', 1)])
+        #     if higher:
+        #         handicap = math.ceil(handicap/2)
+        #     else:
+        #         handicap = math.floor(handicap/2)
         return handicap
 
     def _check_handicap(self):
-        player_handicap= self._calculate_handicap(self.tournament_id.field_id,self.player_id)
+        player_handicap= self._calculate_handicap(self.tournament_id.field_ids,self.player_id)
         if player_handicap < self.tournament_id.start_handicap:
             raise ValidationError(
                 _('Player %(player)s has a smaller handicap (%(player_handicap)s) than tournament category %(tournament_handicap)s.',
@@ -272,6 +274,7 @@ class GolfScore(models.Model):
         index=True,
         copy=False,
         compute="_compute_name",
+        default=lambda self: _('New'),
         store=True,
     )
 
@@ -281,7 +284,7 @@ class GolfScore(models.Model):
                               required=True, ondelete='cascade', index=True, copy=False)
     hole_number = fields.Integer(related='hole_id.number',readonly=True,store=True)
     field_name = fields.Char(compute='_set_field_name', store=True)
-
+    handicap = fields.Integer(related='hole_id.handicap', readonly=True, store=True)
     score = fields.Integer(string='Score')
 
     @api.depends('card_id', 'hole_id')

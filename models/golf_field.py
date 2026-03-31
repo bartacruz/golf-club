@@ -1,4 +1,5 @@
 from odoo import models, fields, _, api
+from random import randint
 
 class GolfField(models.Model):
     _name =  'golf.field'
@@ -6,6 +7,9 @@ class GolfField(models.Model):
 
     _rec_name = 'name'
     _order = 'name ASC'
+
+    def _get_default_color(self):
+        return randint(1, 11)
 
     name = fields.Char(
         string='Name',
@@ -28,7 +32,7 @@ class GolfField(models.Model):
     hole_count = fields.Integer(compute='_calculate_data', store=True)
     par = fields.Integer(compute="_calculate_data",store=True)
     length = fields.Integer(compute="_calculate_data",store=True)
-
+    color = fields.Integer(default=_get_default_color)
             
     @api.depends("hole_ids.par","hole_ids.length")
     def _calculate_data(self):

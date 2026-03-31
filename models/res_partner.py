@@ -52,7 +52,12 @@ class ResPartner(models.Model):
     def _golf_count_cards(self):
         for rec in self:
             rec.golf_card_count = len(rec.golf_card_ids)
-    
+    def join_tounament(self,tournament):
+        for rec in self:
+            rec.golf_card_ids.create({
+                tournament.id: tournament.id,
+                'player_id': rec.id,
+            })
     def action_open_golf_cards(self):
         for rec in self:
             action = self.env.ref("golf.action_golf_card_act_window").read()[0]

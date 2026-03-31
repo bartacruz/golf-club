@@ -113,10 +113,13 @@
                     <group>
                         <field name="score_ids" widget="golf_card_widget">
                             <list>
-                                <field name="hole_id"></field>
-                                <field name="score"></field>
-                                <field name="field_name"></field>
                                 <field name="hole_number"></field>
+                                <field name="score"></field>
+                                <field name="handicap"></field>
+                                <field name="hole_id"></field>
+                                
+                                <field name="field_name" optional="hide"></field>
+                                
                             </list>
                         </field>
                         <group class="oe_subtotal_footer oe_right golf-card-totals">
