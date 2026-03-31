@@ -1,0 +1,103 @@
+<templates xml:space="preserve">
+    <t t-name="golf_club.ScorecardTemplate">
+        <div class="o_golf_scorecard d-flex flex-column gap-4">
+            
+            <!-- FRONT NINE (1-9) -->
+            <div t-if="scorecardData.frontNine.length > 0" class="table-responsive shadow-sm">
+                <table class="table table-sm table-bordered text-center align-middle bg-white mb-0 border-dark">
+                    <thead class="table-dark">
+                        <tr>
+                            <th style="width: 80px;">HOLE</th>
+                            <t t-foreach="scorecardData.frontNine" t-as="rec" t-key="rec.id">
+                                <th t-esc="rec.data.hole_number"/>
+                            </t>
+                            <th class="bg-primary text-white">OUT</th>
+                            <th class="bg-primary text-white">NET</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-muted small">
+                            <td class="fw-bold bg-light">HCP</td>
+                            <t t-foreach="scorecardData.frontNine" t-as="rec" t-key="rec.id">
+                                <td t-esc="rec.data.handicap"/>
+                            </t>
+                            <td class="bg-light">-</td>
+                        </tr>
+                        <tr class="text-muted small">
+                            <td class="fw-bold bg-light">PAR</td>
+                            <t t-foreach="scorecardData.frontNine" t-as="rec" t-key="rec.id">
+                                <td t-esc="rec.data.par"/>
+                            </t>
+                            <td class="bg-light">-</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">SCORE</td>
+                            <t t-foreach="scorecardData.frontNine" t-as="rec" t-key="rec.id">
+                                <td class="p-0">
+                                    <input type="number" 
+                                           class="form-control form-control-sm border-0 text-center fw-bold h-100"
+                                           t-att-value="rec.data.score"
+                                           t-on-change="(ev) => this.onScoreChange(rec, ev)"/>
+                                </td>
+                            </t>
+                            <td class="fw-bold" t-esc="scorecardData.frontGross"/>
+                            <td class="fw-bold bg-light text-primary" t-esc="scorecardData.frontNet"/>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- BACK NINE (10-18) -->
+            <div t-if="scorecardData.backNine.length > 0" class="table-responsive shadow-sm">
+                <table class="table table-sm table-bordered text-center align-middle bg-white mb-0 border-dark">
+                    <thead class="table-dark">
+                        <tr>
+                            <th style="width: 80px;">HOLE</th>
+                            <t t-foreach="scorecardData.backNine" t-as="rec" t-key="rec.id">
+                                <th t-esc="rec.data.hole_number"/>
+                            </t>
+                            <th class="bg-primary text-white">IN</th>
+                            <th class="bg-primary text-white">NET</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr class="text-muted small">
+                            <td class="fw-bold bg-light">HCP</td>
+                            <t t-foreach="scorecardData.backNine" t-as="rec" t-key="rec.id">
+                                <td t-esc="rec.data.handicap"/>
+                            </t>
+                            <td class="bg-light">-</td>
+                        </tr>
+                        <tr class="text-muted small">
+                            <td class="fw-bold bg-light">PAR</td>
+                            <t t-foreach="scorecardData.backtNine" t-as="rec" t-key="rec.id">
+                                <td t-esc="rec.data.par"/>
+                            </t>
+                            <td class="bg-light">-</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">SCORE</td>
+                            <t t-foreach="scorecardData.backNine" t-as="rec" t-key="rec.id">
+                                <td class="p-0">
+                                    <input type="number" 
+                                           class="form-control form-control-sm border-0 text-center fw-bold h-100"
+                                           t-att-value="rec.data.score"
+                                           t-on-change="(ev) => this.onScoreChange(rec, ev)"/>
+                                </td>
+                            </t>
+                            <td class="fw-bold bg-light text-primary" t-esc="scorecardData.backGross"/>
+                            <td class="fw-bold bg-light text-primary" t-esc="scorecardData.backNet"/>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- GRAND TOTAL -->
+            <div class="d-flex justify-content-end align-items-center p-3 bg-dark text-white rounded shadow">
+                <span class="me-3 fw-bold text-uppercase">Total Score:</span>
+                <span class="display-6 m-0 fw-bolder" t-esc="scorecardData.totalScore"/>
+            </div>
+        </div>
+    </t>
+</templates>

@@ -285,6 +285,8 @@ class GolfScore(models.Model):
     hole_number = fields.Integer(related='hole_id.number',readonly=True,store=True)
     field_name = fields.Char(compute='_set_field_name', store=True)
     handicap = fields.Integer(related='hole_id.handicap', readonly=True, store=True)
+    length = fields.Integer(related='hole_id.length', readonly=True, store=True)
+    par = fields.Integer(related='hole_id.par', readonly=True, store=True)
     score = fields.Integer(string='Score')
 
     @api.depends('card_id', 'hole_id')

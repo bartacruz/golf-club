@@ -41,7 +41,8 @@
 #    'images': ['static/description/golf-icon.png'],
     'assets': {
         'web.assets_backend': [
-            'golf_club/static/src/js/golf_card_widget.js',
+            # 'golf_club/static/src/js/golf_card_widget.js',
+            'golf_club/static/src/components/**/*',
             'golf_club/static/src/css/golf.scss',
         ],
         'web.report_assets_common': [

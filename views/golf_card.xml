@@ -113,11 +113,12 @@
                     <group>
                         <field name="score_ids" widget="golf_card_widget">
                             <list>
-                                <field name="hole_number"></field>
-                                <field name="score"></field>
-                                <field name="handicap"></field>
-                                <field name="hole_id"></field>
-                                
+                                <field name="hole_number"/>
+                                <field name="score" />
+                                <field name="handicap"/>
+                                <field name="hole_id" />
+                                <field name="length" />
+                                <field name="par" />
                                 <field name="field_name" optional="hide"></field>
                                 
                             </list>
