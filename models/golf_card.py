@@ -12,7 +12,7 @@ class GolfCard(models.Model):
     name = fields.Char(
         string='Name',
         required=True,
-        default=lambda self: _('New'),
+        default='New',
         copy=False
     )
 
@@ -30,17 +30,17 @@ class GolfCard(models.Model):
     marker_id = fields.Many2one('res.partner', string='Marker', domain=[
                                 ("golf_player", "=", True)])
 
-    score_ids = fields.One2many("golf.score", 'card_id', string=_("Scores"))
+    score_ids = fields.One2many("golf.score", 'card_id', string='Scores')
 
     gross_score = fields.Integer(compute='_calculate_score', store=True)
     net_score = fields.Integer(compute='_calculate_score', store=True)
 
-    gross_score_first = fields.Integer(string=_('First 9'),compute='_calculate_score', store=True)
-    gross_score_last = fields.Integer(string=_('Last 9'),compute='_calculate_score', store=True)
+    gross_score_first = fields.Integer(string='First 9',compute='_calculate_score', store=True)
+    gross_score_last = fields.Integer(string='Last 9',compute='_calculate_score', store=True)
     
-    player_handicap = fields.Integer(string=_('Handicap'))
-    player_license = fields.Integer(string=_('Golf license'))
-    player_license_active = fields.Boolean(string=_('License Active'), related='player_id.golf_license_active', readonly=True)
+    player_handicap = fields.Integer(string='Handicap')
+    player_license = fields.Integer(string='Golf license')
+    player_license_active = fields.Boolean(string='License Active', related='player_id.golf_license_active', readonly=True)
 
     position = fields.Integer(default=0)
     position_tied = fields.Boolean()
@@ -274,7 +274,7 @@ class GolfScore(models.Model):
         index=True,
         copy=False,
         compute="_compute_name",
-        default=lambda self: _('New'),
+        default='New',
         store=True,
     )
 

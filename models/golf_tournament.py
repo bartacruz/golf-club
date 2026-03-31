@@ -22,25 +22,25 @@ class GolfTournament(models.Model):
     name = fields.Char(
         string='Name',
         required=True,
-        default=lambda self: _('New'),
+        default='New',
         copy=False
     )
 
-    date = fields.Date(string=_('Date'))
+    date = fields.Date(string='Date')
     parent_id = fields.Many2one('golf.tournament')
     child_ids = fields.One2many('golf.tournament', 'parent_id')
     field_ids = fields.Many2many(
-        string=_('Fields'),
+        string='Fields',
         comodel_name='golf.field',
     )
     # field_id = fields.Many2one(
-    #     string=_('Field'),
+    #     string='Field',
     #     comodel_name='golf.field',
     # )
 
-    notes = fields.Text(_("Notes"))
+    notes = fields.Text('Notes')
 
-    card_ids = fields.One2many('golf.card','tournament_id',string=_('Cards'))
+    card_ids = fields.One2many('golf.card','tournament_id',string='Cards')
     card_count = fields.Integer(compute = '_count_cards')
     active_card_count = fields.Integer(compute = '_count_cards')
     player_ids = fields.Many2many('res.partner', string='Players', domain=[("golf_player", "=", True)])
@@ -50,10 +50,10 @@ class GolfTournament(models.Model):
         comodel_name='product.template',
         ondelete='restrict',
     )
-    tournament_mode_id = fields.Many2one('golf.tournament_mode', string = _('Mode'))
+    tournament_mode_id = fields.Many2one('golf.tournament_mode', string = 'Mode')
     
     external_reference = fields.Integer()
-    posted = fields.Boolean(string=_('Posted')) # posted to AAG
+    posted = fields.Boolean(string='Posted') # posted to AAG
     
     state = fields.Selection(selection=[
             ('new', 'New'),
@@ -64,8 +64,8 @@ class GolfTournament(models.Model):
         default='new')
     
     category = fields.Selection(selection=[('0','Caballeros'),('1','Damas')], default='0')
-    start_handicap = fields.Integer(_('Start handicap'), default=DEFAULT_START_HANDICAP)
-    end_handicap = fields.Integer(_('End handicap'), default=DEFAULT_END_HANDICAP)
+    start_handicap = fields.Integer('Start handicap', default=DEFAULT_START_HANDICAP)
+    end_handicap = fields.Integer('End handicap', default=DEFAULT_END_HANDICAP)
     
     @api.onchange('date')
     def _default_product(self):

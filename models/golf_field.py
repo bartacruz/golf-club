@@ -14,19 +14,19 @@ class GolfField(models.Model):
     name = fields.Char(
         string='Name',
         required=True,
-        default=lambda self: _('New'),
+        default='New',
         copy=False
     )
     
-    external_reference = fields.Char(string = "External reference") # AAG ID
-    tee_color = fields.Char(string=_("Tee color"))
-    slope_rating_front = fields.Float(string=_("Slope Rating Front"),digits=(4,2))
-    slope_rating_back = fields.Float(string=_("Slope Rating Back"),digits=(4,2))
-    slope_rating_total = fields.Float(string=_("Slope Rating Total"),digits=(4,2))
+    external_reference = fields.Char(string='External reference') # AAG ID
+    tee_color = fields.Char(string='Tee color')
+    slope_rating_front = fields.Float(string='Slope Rating Front', digits=(4,2))
+    slope_rating_back = fields.Float(string='Slope Rating Back', digits=(4,2))
+    slope_rating_total = fields.Float(string='Slope Rating Total', digits=(4,2))
 
-    course_rating_front = fields.Float(string=_("Course Rating Front"),digits=(4,2))
-    course_rating_back = fields.Float(string=_("Course Rating Back"),digits=(4,2))
-    course_rating_total = fields.Float(string=_("Course Rating Total"),digits=(4,2))
+    course_rating_front = fields.Float(string='Course Rating Front', digits=(4,2))
+    course_rating_back = fields.Float(string='Course Rating Back', digits=(4,2))
+    course_rating_total = fields.Float(string='Course Rating Total', digits=(4,2))
     
     hole_ids = fields.One2many("golf.hole",'field_id', 'Holes')
     hole_count = fields.Integer(compute='_calculate_data', store=True)

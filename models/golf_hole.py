@@ -17,7 +17,7 @@ class GolfHole(models.Model):
     number = fields.Integer()
     par = fields.Integer()
     handicap = fields.Integer()    
-    length = fields.Integer(string=_("Length"))
+    length = fields.Integer(string='Length')
 
     @api.depends("field_id", "number")
     def _compute_name(self):

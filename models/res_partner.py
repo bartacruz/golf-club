@@ -8,21 +8,21 @@ class ResPartner(models.Model):
 
     golf_player = fields.Boolean("Is a golf player")
     golf_license = fields.Integer(
-        string=_('Golf license'),
+        string='Golf license',
     )
-    golf_license_active = fields.Boolean(_('License is active'))
+    golf_license_active = fields.Boolean('License is active')
     golf_handicap = fields.Integer(
-        string=_('Handicap'),
+        string='Handicap',
     )
     
     golf_handicap_index = fields.Float(
-        string=_("Handicap Index"),
+        string='Handicap Index',
         digits=(4,2),
     )
     golf_card_ids = fields.One2many(
         'golf.card',
         'player_id',
-        string=_('Cards')
+        string='Cards'
     )
     golf_card_count = fields.Integer(compute = '_golf_count_cards')
 
