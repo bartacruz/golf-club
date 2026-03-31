@@ -1,17 +1,5 @@
 <odoo>
 
-    <!-- VIEWS: "Human readable name"
-
-    - Model·········: model
-    - _rec_name·····: name
-    - Domain········: []
-    - Context·······: \{}
-    - Parent menu ··: base.menu_custom
-    - View priority·: 16    
-    - Sequence····..: 10
-    - Action help···: Something about model
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
     <!-- list view for "model" -->
     <record id="view_golf_tournament_list" model="ir.ui.view">
         <field name="name">view.golf.tournament.list</field>
@@ -40,7 +28,7 @@
         <field name="name">view.golf.tournament.form</field>
         <field name="model">golf.tournament</field>
         <field name="arch" type="xml">
-            <form string="model_form" create="true" delete="true" edit="true">
+            <form string="Tournament" create="true" delete="true" edit="true">
                 <header>
                     <button name="fetch_tournament" string="Fetch" type="object" class="oe_highlight" invisible="not external_reference"/>
                     <button name="post_external" string="Post" type="object" class="oe_highlight" invisible="posted or state !='finished'"/>
@@ -71,12 +59,12 @@
                         </h1>
                     </div>
                     <group>
-                        <group id="main-left">
+                        <group>
                             <field name="date" />
                             <field name="default_product_id" />
                             <field name="website_published" />
                         </group>
-                        <group id="main-right">
+                        <group>
                             <field name="field_id" options="{'no_create_edit': True}"></field>
                             <field name="tournament_mode_id" options="{'no_create_edit': True}" />
                             <field name="category" />
@@ -111,11 +99,7 @@
                         </page>
                     </notebook>
                 </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids"/>
-                    <field name="activity_ids"/>
-                    <field name="message_ids" options="{'post_refresh': 'recipients'}"/>
-                </div>
+            <chatter/>
             </form>
         </field>
     </record>

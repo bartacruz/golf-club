@@ -55,7 +55,7 @@ class GolfCard(models.Model):
         ('posted','Posted'),
         ('loaded','Loaded'),
         ('cancelled','Cancelled'),
-        ], default='new')
+        ], default='draft')
     external_reference = fields.Integer()
     posted = fields.Boolean()
     

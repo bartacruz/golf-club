@@ -93,15 +93,15 @@ class ResPartner(models.Model):
         self.golf_handicap_index = data.get('HandicapIndex')
         self.golf_handicap = aag_api.get_handicap(self.golf_handicap_index)
         if not self.golf_membership:
-            club = int(self.env['ir.config_parameter'].sudo().get_param('golf.club_id'))
+            club = int(self.env['ir.config_parameter'].sudo().get_param('golf_club.club_id'))
             if data.get('OptionClubId',0) == club:
-                membership = int(self.env['ir.config_parameter'].sudo().get_param('golf.default_product'))
+                membership = int(self.env['ir.config_parameter'].sudo().get_param('golf_club.default_product'))
                 self.golf_membership =  membership
         if not self.l10n_ar_afip_responsibility_type_id:
-            self.l10n_ar_afip_responsibility_type_id = int(self.env['ir.config_parameter'].sudo().get_param('golf.default_responsibility'))
+            self.l10n_ar_afip_responsibility_type_id = int(self.env['ir.config_parameter'].sudo().get_param('golf_club.default_responsibility'))
         if not self.vat:
             try:
-                self.l10n_latam_identification_type_id = int(self.env['ir.config_parameter'].sudo().get_param('golf.default_identification_type'))
+                self.l10n_latam_identification_type_id = int(self.env['ir.config_parameter'].sudo().get_param('golf_club.default_identification_type'))
                 self.vat = data.get('DocNumber')
             except:
                 print("Error al setear el dni de ",self.name,': ', data.get('DocNumber'))
@@ -115,7 +115,7 @@ class ResPartner(models.Model):
                 record.update_from_external(data)
 
     def action_update_pricelist(self):
-        pricelist_id = int(self.env['ir.config_parameter'].sudo().get_param('golf.members_pricelist'))
+        pricelist_id = int(self.env['ir.config_parameter'].sudo().get_param('golf_club.members_pricelist'))
         for record in self:
             if record.golf_membership:
                 record.property_product_pricelist = pricelist_id

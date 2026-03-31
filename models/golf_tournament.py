@@ -72,9 +72,9 @@ class GolfTournament(models.Model):
         if not self.date:
             return
         if self.date.weekday() > 4:
-            self.default_product_id = int(self.env['ir.config_parameter'].sudo().get_param('golf.tournament_product_weekend'))
+            self.default_product_id = int(self.env['ir.config_parameter'].sudo().get_param('golf_club.tournament_product_weekend'))
         else:
-            self.default_product_id = int(self.env['ir.config_parameter'].sudo().get_param('golf.tournament_product'))
+            self.default_product_id = int(self.env['ir.config_parameter'].sudo().get_param('golf_club.tournament_product'))
     
     def action_activate(self):
         for record in self:
@@ -173,7 +173,7 @@ class GolfTournament(models.Model):
         self.date = t.get('StartDate')
         # TODO: chequear si se puede crear en la AAG un campo para 9 hoyos.
         if t.get('BatchesHoles',0) == 9:
-            self.field_id = int(self.env['ir.config_parameter'].sudo().get_param('golf.default_field_9'))
+            self.field_id = int(self.env['ir.config_parameter'].sudo().get_param('golf_club.default_field_9'))
         else:
             self.field_id = self.env['golf.field'].search([('external_reference','=',t.get('Field'))]).id
         
