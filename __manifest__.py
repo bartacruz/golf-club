@@ -3,7 +3,7 @@
     'name': "Golf Club",
 
     'summary': "Golf Club Module",
-    'sequence': -100,
+    'sequence': 1,
     'description': """
         Module for managing a Golf Club, players, fields, tournaments and cards.
     """,
@@ -12,7 +12,7 @@
     'website': "http://www.bartatech.com",
 
     'category': 'Sports',
-    'version': '15.0.0.1.11',
+    'version': '18.0.0.0.1',
 
     # any module necessary for this one to work correctly
     'depends': ['base','website','mail','account','l10n_ar'],
@@ -52,4 +52,5 @@
             'golf/static/src/css/golf.scss',
         ],
     },
+    'maintainers': ['bartacruz'],
 }
