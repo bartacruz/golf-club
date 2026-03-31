@@ -215,12 +215,13 @@ class GolfTournament(models.Model):
         self.action_leaderboard()
         return self
     
-    @api.model
-    def create(self,vals):
-        tournament = super(GolfTournament, self).create(vals)
-        if vals.get("name", _("New")) == _("New"):
-            tournament._check_name()
-        return tournament
+    @api.model_create_multi
+    def create(self,vals_list):
+        tournaments = super(GolfTournament, self).create(vals_list)
+        for tournament in tournaments:
+            if tournament.name == _("New"):
+                tournament._check_name()
+        return tournaments
     
     def write(self, vals):
         t =  super().write(vals)
