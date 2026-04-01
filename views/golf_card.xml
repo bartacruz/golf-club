@@ -5,10 +5,6 @@
     <record id="view_golf_card_list" model="ir.ui.view">
         <field name="name">view.golf.card.list</field>
         <field name="model">golf.card</field>
-        <field name="type">list</field>
-        <field name="mode">primary</field>
-        <field name="priority" eval="16" />
-        <field name="active" eval="True" />
         <field name="arch" type="xml">
             <list string="model_list" create="true" delete="true" edit="true" default_order="net_score, gross_score,player_id">
                 <field name="player_id" />
@@ -16,7 +12,7 @@
                 <field name="player_license_active" />
                 <field name="date" />
                 <field name="tournament_id" />
-                <field name="stage" widget="badge" decoration-success="stage=='loaded'" />
+                <field name="state" widget="badge" decoration-success="state=='posted'" decoration-primary="state=='loaded'" decoration-info="state=='active'" decoration-danger="state=='cancelled'"/>
 
                 <field name="gross_score_first" />
                 <field name="gross_score_last" />
@@ -34,10 +30,7 @@
     <record id="view_golf_card_leaderboard" model="ir.ui.view">
         <field name="name">view.golf.card.leaderboard</field>
         <field name="model">golf.card</field>
-        <field name="type">list</field>
-        <field name="mode">primary</field>
         <field name="priority" eval="99" />
-        <field name="active" eval="True" />
         <field name="arch" type="xml">
             <list string="model_list" create="true" delete="true" edit="false" default_order="net_score, gross_score,player_id">
                 <field name="position_label" string="Pos" />
@@ -57,30 +50,20 @@
             <form string="model_form" create="true" delete="true" edit="true">
                 <field name="account_move_id" invisible="1" />
                 <header>
-                    <button type="object" name="action_presented" string="Presentada" />
-                    <field name="stage" widget="statusbar" />
+                    <button type="object" name="action_post" string="Post" invisible="state != 'loaded'"/>
+                    <button type="object" name="action_golf_card_invoice" string="Create Invoice" invisible="account_move_id != False"/>
+                    <field name="state" widget="statusbar" />
                 </header>
                 <sheet>
                     <div class="oe_button_box" name="button_box">
                         <button class="oe_stat_button"
                             type="object"
-                            invisible="account_move_id"
+                            invisible="not account_move_id"
                             name="action_view_invoice"
                             icon="fa-file"
-                            context="{'card_id': id}"> <!-- CAMBIO AQUÍ: active_id -> id -->
+                            context="{'card_id': id}"> 
                             <div class="o_stat_info">
                                 <span class="o_stat_text">Invoice</span>
-                            </div>
-                        </button>
-
-                        <button class="oe_stat_button"
-                            type="object"
-                            invisible="not account_move_id"
-                            name="action_golf_card_invoice"
-                            icon="fa-file"
-                            context="{'card_id': id}"> <!-- CAMBIO AQUÍ: active_id -> id -->
-                            <div class="o_stat_info">
-                                <span class="o_stat_text">Create Invoice</span>
                             </div>
                         </button>
                     </div>
@@ -107,7 +90,6 @@
                             <field name="tournament_id" />
                             <field name="date" />
                             <field name="account_move_id" readonly="1" />
-                            <field name="posted" />
                         </group>
                     </group>
                     <group>
@@ -159,7 +141,7 @@
 
     <!-- Main window action for "model" -->
     <record id="action_golf_card_act_window" model="ir.actions.act_window">
-        <field name="name">Golf Cardo</field>
+        <field name="name">Golf Card</field>
         <field name="res_model">golf.card</field>
         <field name="view_mode">list,form</field>
         <field name="search_view_id" ref="view_golf_card_search" />
@@ -225,7 +207,6 @@
         <field name="paperformat_id" ref="golf_club.paperformat_golf_card" />
     </record>
 
-    <!-- Main menu for "model" -->
     <record id="menu_golf_card" model="ir.ui.menu">
         <field name="name">Golf Card</field>
         <field name="sequence" eval="10" />
@@ -236,9 +217,6 @@
     <record id="view_golf_score_list" model="ir.ui.view">
         <field name="name">view.golf.score.list</field>
         <field name="model">golf.score</field>
-        <field name="type">list</field>
-        <field name="mode">primary</field>
-        <field name="active" eval="True" />
         <field name="arch" type="xml">
             <list string="golf_score_list">
                 <field name="name" />

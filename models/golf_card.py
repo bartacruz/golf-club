@@ -49,15 +49,13 @@ class GolfCard(models.Model):
     account_move_id = fields.Many2one(
         'account.move', string='Invoice', readonly=True, copy=False)
 
-    stage = fields.Selection(selection=[
+    state = fields.Selection(selection=[
         ('draft','Draft'),
-        ('active','Active'),
-        ('posted','Posted'),
-        ('loaded','Loaded'),
+        ('active','Active'), # is paid or forced
+        ('loaded','Loaded'), # all holes with score > 0
+        ('posted','Posted'), # Presented to the club.
         ('cancelled','Cancelled'),
         ], default='draft')
-    external_reference = fields.Integer()
-    posted = fields.Boolean()
     
     def set_score(self,hole_number,score):
         golf_score = self.score_ids.filtered(lambda s: s.hole_number == hole_number)
@@ -125,8 +123,9 @@ class GolfCard(models.Model):
     @api.onchange('player_id')
     def _set_handicap(self):
         for record in self:
+            if record.state in ['posted','cancelled']:
+                return
             if not record.player_id:
-                print("no player",record,record.player_id)
                 return
             player = record.player_id
             record.player_handicap = record._check_handicap()
@@ -134,9 +133,11 @@ class GolfCard(models.Model):
             print("_set_handicap",record,record.player_id.name,record.player_handicap,record.player_license)
             
 
-    @api.depends("score_ids")
+    @api.depends("score_ids.score", "player_handicap")
     def _calculate_score(self):
         for rec in self:
+            if rec.state != "posted":
+                return
             net = rec.net_score  # save it to detect changes
             rec.gross_score = sum(c.score for c in rec.score_ids)
             rec.gross_score_first = sum(c.score for c in rec.score_ids[0:9])
@@ -166,43 +167,22 @@ class GolfCard(models.Model):
     
     def write(self, vals):
         r = super().write(vals)
-        if self.stage not in ['loaded','cancelled'] and not self.score_ids.filtered(lambda s: s.score == 0):
+        
+        if self.state == "active" and not self.score_ids.filtered(lambda s: s.score == 0):
             print("tarjeta cargada!", [s.score for s in self.score_ids])
-            self.stage = 'loaded'
+            self.state = 'loaded'
             self.message_post(body=_('Card scores loaded'))
             return True
         return r
     
-    def is_postable(self):
-        self.ensure_one()
-        return self.player_id.golf_license_active and not self.posted and self.stage == 'loaded'
     
-    def action_posted(self):
+    def action_post(self):
         for record in self:
-            self.posted = True
-            self.message_post(body=_('Card posted to AAG'))
-            
-    def action_presented(self):
-        for record in self:
-            self.stage = 'presented'
-            self.message_post(body=_('Card presented'))
-            
-    def get_external_data(self):
-        scores = []
-        data = {
-            'Id': self.id,
-            'EnrollmentNumber': self.player_license,
-            'BatchNumber': 1,
-            'IniHole': 1,
-            'State': 1,
-            'ScoreGrossTotal': self.gross_score,
-            'ScoreGrossIda': self.gross_score_first,
-            'ScoreGrossVta': self.gross_score_last,
-        }
-        for score in self.score_ids:
-            data['ScoreGrossHole%02d' % score.hole_number] = score.score
-        return data
-    
+            if record.state != 'loaded':
+                raise ValidationError(_('Only cards with all scores loaded can be posted.'))
+            self.state = 'posted'
+            self.message_post(body=_('Card posted'))
+                    
     def action_view_invoice(self):
         action = self.env.ref("account.action_move_out_invoice_type").read()[0]
         action["views"] = [(self.env.ref("account.view_move_form").id, "form")]

@@ -15,8 +15,6 @@
                 <field name="card_count" />
                 <field name="parent_id" />
                 <field name="state" widget="badge" decoration-info="state == 'new'" decoration-success="state == 'finished'" decoration-warning="state == 'active'"/>
-                <field name="posted" />
-                <field name="external_reference" />
                 <field name="website_published" />
                 
             </list>
@@ -30,8 +28,6 @@
         <field name="arch" type="xml">
             <form string="Tournament" create="true" delete="true" edit="true">
                 <header>
-                    <button name="fetch_tournament" string="Fetch" type="object" class="oe_highlight" invisible="not external_reference"/>
-                    <button name="post_external" string="Post" type="object" class="oe_highlight" invisible="posted or state !='finished'"/>
                     <button name="action_activate" string="Activate" type="object" invisible="state !='new'"/>
                     <button name="action_finish" string="Finish" type="object"  invisible="state in ['finished','cancelled']"/>
                     <button name="action_cancel" string="Cancel" type="object"  invisible="state in ['finished','cancelled']"/>
@@ -91,12 +87,7 @@
                                 <field name="child_ids" />
                             </group>
                         </page>
-                        <page string="External Info">
-                            <group>
-                                <field name="external_reference" />
-                                <field name="posted" />
-                            </group>
-                        </page>
+                        
                     </notebook>
                 </sheet>
             <chatter/>
@@ -115,8 +106,6 @@
         <field name="arch" type="xml">
             <search string="model_search">
                 <field name="name" />
-                <filter string="Posted" name="type_golf_tournament_posted" domain="[('posted', '=', True)]" />
-                <filter string="Unposted" name="type_golf_tournament_posted" domain="[('posted', '=', False)]" />
                 <separator />
                 <filter string="New" name="type_golf_tournament_new" domain="[('state', '=', 'new')]" />
                 <filter string="Active" name="type_golf_tournament_active" domain="[('state', '=', 'active')]" />
