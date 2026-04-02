@@ -27,6 +27,7 @@
         'views/golf_card.xml',
         'views/golf_player.xml',
         'views/golf_tournament.xml',
+        'views/product_template.xml',
         'views/res_config_settings.xml',
         'views/res_partner.xml',
         'views/menu.xml',
