@@ -42,7 +42,6 @@
         </field>
     </record>
 
-    <!-- Form view for "model" -->
     <record id="view_golf_card_form" model="ir.ui.view">
         <field name="name">view.golf.card.form</field>
         <field name="model">golf.card</field>
