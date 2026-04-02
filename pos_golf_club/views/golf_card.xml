@@ -1,0 +1,23 @@
+<odoo>
+  <data>
+    <record id="view_golf_card_form" model="ir.ui.view">
+      <field name="name">view.golf.card.form</field>
+      <field name="inherit_id" ref="golf_club.view_golf_card_form"/>
+      <field name="model">golf.card</field>
+      <field name="arch" type="xml">
+        <div class="oe_button_box" name="button_box" position="inside">
+                        <button class="oe_stat_button"
+                            type="object"
+                            invisible="not pos_order_id"
+                            name="action_view_pos_order"
+                            icon="fa-dollar"
+                            context="{'res_id': id}"> 
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">POS Order</span>
+                            </div>
+                        </button>
+                    </div>
+      </field>
+    </record>
+  </data>
+</odoo>
