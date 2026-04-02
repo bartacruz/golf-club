@@ -57,10 +57,20 @@ class GolfCard(models.Model):
         ('cancelled','Cancelled'),
         ], default='draft')
     
+    is_paid = fields.Boolean(string='Paid', compute="_compute_is_paid", store=True)
+    
     def set_score(self,hole_number,score):
         golf_score = self.score_ids.filtered(lambda s: s.hole_number == hole_number)
         golf_score.score = score
 
+    @api.depends('account_move_id.state')
+    def _compute_is_paid(self):
+        for record in self:
+            if record.account_move_id and record.account_move_id.payment_state == 'paid':
+                record.is_paid = True
+                if record.state == 'draft':
+                    record.state = 'active'
+            
     @api.depends('position', 'position_tied')
     def _compute_position_label(self):
         for record in self:
