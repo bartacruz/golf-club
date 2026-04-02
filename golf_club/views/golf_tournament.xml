@@ -1,6 +1,5 @@
 <odoo>
 
-    <!-- list view for "model" -->
     <record id="view_golf_tournament_list" model="ir.ui.view">
         <field name="name">view.golf.tournament.list</field>
         <field name="model">golf.tournament</field>
@@ -15,13 +14,10 @@
                 <field name="card_count" />
                 <field name="parent_id" />
                 <field name="state" widget="badge" decoration-info="state == 'new'" decoration-success="state == 'finished'" decoration-warning="state == 'active'"/>
-                <field name="website_published" />
-                
             </list>
         </field>
     </record>
 
-    <!-- Form view for "model" -->
     <record id="view_golf_tournament_form" model="ir.ui.view">
         <field name="name">view.golf.tournament.form</field>
         <field name="model">golf.tournament</field>
@@ -33,13 +29,9 @@
                     <button name="action_cancel" string="Cancel" type="object"  invisible="state in ['finished','cancelled']"/>
                     <button name="action_leaderboard" string="Calculate" type="object" />
                     <field name="state" widget="statusbar"/>
-
                 </header>
-                <sheet>
-                    
+                <sheet>                    
                     <div class="oe_button_box" name="button_box">
-                        <field name="website_url" invisible="1" />
-                        <field name="is_published" widget="website_redirect_button" />
                         <field name="active_card_count" invisible="1" />
                         <button class="oe_stat_button" type="action" name="%(action_golf_cards_related)d" icon="fa-id-card">
                             <field string="Cards" name="card_count" widget="statinfo" />
@@ -58,7 +50,6 @@
                         <group>
                             <field name="date" />
                             <field name="default_product_id" />
-                            <field name="website_published" />
                         </group>
                         <group>
                             <field name="field_ids" options="{'color_field':'color','no_create_edit': True}" widget="many2many_tags"></field>
@@ -95,7 +86,6 @@
         </field>
     </record>
 
-    <!-- Search view for "model" -->
     <record id="view_golf_tournament_search" model="ir.ui.view">
         <field name="name">view.golf.tournament.search</field>
         <field name="model">golf.tournament</field>
@@ -111,8 +101,6 @@
                 <filter string="Active" name="type_golf_tournament_active" domain="[('state', '=', 'active')]" />
                 <filter string="Finished" name="type_golf_tournament_finished" domain="[('state', '=', 'finished')]" />
                 <filter string="Cancelled" name="type_golf_tournament_cancelled" domain="[('state', '=', 'cancelled')]" />
-                <separator />
-                <filter string="Published in website" name="filter_published" domain="[('website_published', '=', True)]"/>
             </search>
         </field>
     </record>
@@ -140,16 +128,5 @@
         <field name="action" ref="action_golf_tournament_act_window" />
         <field name="parent_id" ref="base.menu_custom" />
     </record>
-    <record id="action_golf_home_page" model="ir.actions.client">
-        <field name="name">Golf Home</field>
-        <field name="tag">golf.homepage</field>
-    </record>
-    <record id="golf_tournament_toggle_website_published" model="ir.actions.server">
-        <field name="name">Toggle website published</field>
-        <field name="binding_model_id" ref="golf_club.model_golf_tournament" />
-        <field name="binding_view_types">list,form</field>
-        <field name="model_id" ref="golf_club.model_golf_tournament" />
-        <field name="state">code</field>
-        <field name="code">action = records.action_toggle_website_published()</field>
-    </record>
+    
 </odoo>

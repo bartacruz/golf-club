@@ -16,21 +16,21 @@ class Golf(http.Controller):
         Tournament = request.env['golf.tournament']
         tournaments = Tournament.sudo().search([('website_published','=',True)], order='date desc')
         values = {'tournaments': tournaments}
-        return request.render("golf.tournaments", values)
+        return request.render("golf_club_website.tournaments", values)
 
     @http.route(['/golf/tournament/<model("golf.tournament"):tournament>'], type='http', auth="public", website=True)
     def tournament(self, tournament=None, **post):
         leaderboard = tournament.get_leaderboard()
         values = {'tournament': tournament, 'leaderboard': leaderboard}
-        return request.render("golf.tournament", values)
+        return request.render("golf_club_website.tournament", values)
 
 
     @http.route(['/golf/card/<model("golf.card"):card>'], type='http', auth="public", website=True)
     def card(self, card=None, **post):
         values = {'card': card, }
-        return request.render("golf.card", values)
+        return request.render("golf_club_website.card", values)
     
     @http.route(['/golf/player/<model("res.partner"):player>'], type='http', auth="public", website=True)
     def player(self, player=None, **post):
         values = {'player': player, }
-        return request.render("golf.player", values)
+        return request.render("golf_club_website.player", values)

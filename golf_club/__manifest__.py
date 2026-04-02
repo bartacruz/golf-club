@@ -15,7 +15,7 @@
     'version': '18.0.0.0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','website','mail','account','l10n_ar'],
+    'depends': ['base','mail','account','l10n_ar'],
 
     # always loaded
     'data': [
@@ -31,7 +31,6 @@
         'views/res_config_settings.xml',
         'views/res_partner.xml',
         'views/menu.xml',
-        'views/website_golf.xml',
         'reports/golf_card_report.xml',
         'data/tournament_modes.xml',
     ],
@@ -44,6 +43,7 @@
         'web.assets_backend': [
             # 'golf_club/static/src/js/golf_card_widget.js',
             'golf_club/static/src/components/**/*',
+            'golf_club/static/src/js/debug.js',
             'golf_club/static/src/css/golf.scss',
         ],
         'web.report_assets_common': [
