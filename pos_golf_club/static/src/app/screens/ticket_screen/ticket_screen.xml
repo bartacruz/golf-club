@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="pos_golf_club.TicketScreem" t-inherit="point_of_sale.TicketScreen" t-inherit-mode="extension">
+
+        <xpath expr="//button[@t-on-click='() => doPrint.call(_selectedSyncedOrder)']" position="replace">
+            <button class="control-button btn btn-light btn-lg lh-lg flex-grow-1 flex-shrink-1" t-on-click="printGolfCard">
+                <i t-attf-class="fa {{printGolfCard.status === 'loading' ? 'fa-fw fa-spin fa-circle-o-notch' : 'fa-flag'}} me-1" />Print Card
+            </button>
+        </xpath>
+    </t>
+</templates>

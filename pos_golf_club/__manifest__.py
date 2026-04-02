@@ -22,8 +22,12 @@ Point of Sale for Golf Club module
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
         'views/golf_card.xml',
     ],
+    'assets': {
+        'point_of_sale._assets_pos': [
+            'pos_golf_club/static/src/app/**/*',
+        ],
+    },
 }
 
