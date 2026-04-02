@@ -173,7 +173,6 @@
         </field>
     </record>
 
-    <!-- Main window action for "model" -->
     <record id="action_golf_leaderboard_act_window" model="ir.actions.act_window">
         <field name="name">Leaderboard</field>
         <field name="res_model">golf.card</field>
@@ -199,8 +198,8 @@
         <field name="name">Golf Card</field>
         <field name="model">golf.card</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">golf.golf_card_report</field>
-        <field name="report_file">golf.golf_card_report</field>
+        <field name="report_name">golf_club.golf_card_report</field>
+        <field name="report_file">golf_club.golf_card_report</field>
         <field name="binding_model_id" ref="golf_club.model_golf_card" />
         <field name="binding_type">report</field>
         <field name="paperformat_id" ref="golf_club.paperformat_golf_card" />
