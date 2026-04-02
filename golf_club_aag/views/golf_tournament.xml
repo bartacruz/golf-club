@@ -1,0 +1,24 @@
+<field name="posted" />
+                <field name="external_reference" />
+                
+<record id="view_golf_tournament_form" model="ir.ui.view">
+        <field name="name">view.golf.tournament.form</field>
+        <field name="model">golf.tournament</field>
+        <field name="arch" type="xml">
+            <form string="Tournament" create="true" delete="true" edit="true">
+                <header>
+                    <button name="fetch_tournament" string="Fetch" type="object" class="oe_highlight" invisible="not external_reference"/>
+                    <button name="post_external" string="Post" type="object" class="oe_highlight" invisible="posted or state !='finished'"/>
+    
+
+        <page string="External Info">
+                            <group>
+                                <field name="external_reference" />
+                                <field name="posted" />
+                            </group>
+                        </page>
+
+
+                        <filter string="Posted" name="type_golf_tournament_posted" domain="[('posted', '=', True)]" />
+                <filter string="Unposted" name="type_golf_tournament_posted" domain="[('posted', '=', False)]" />
+                

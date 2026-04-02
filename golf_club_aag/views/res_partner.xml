@@ -1,0 +1,33 @@
+<odoo>
+    <record id="golf_aag_partner_fields" model="ir.ui.view">
+        <field name="name">res.partner.golf.form.aag</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="golf_club.golf_partner_fields" />
+        <field name="arch" type="xml">
+            <field name="golf_handicap" position="after">
+                <button string="Update" class="oe_highlight" type="object" invisible="not golf_license"
+                    name="action_update_handicap" context="{'player_id': id}"></button>
+            </field>
+        </field>
+    </record>
+
+    <record id="golf_update_handicap_action" model="ir.actions.server">
+        <field name="name">Update handicap from AAG</field>
+        <field name="binding_model_id" ref="base.model_res_partner" />
+        <field name="binding_view_types">list,form</field>
+        <field name="model_id" ref="base.model_res_partner" />
+
+        <field name="state">code</field>
+        <field name="code">action = records.action_update_handicap()</field>
+    </record>
+    <record id="golf_update_pricelist_action" model="ir.actions.server">
+        <field name="name">Update members pricelist</field>
+        <field name="binding_model_id" ref="base.model_res_partner" />
+        <field name="binding_view_types">list,form</field>
+        <field name="model_id" ref="base.model_res_partner" />
+
+        <field name="state">code</field>
+        <field name="code">action = records.action_update_pricelist()</field>
+    </record>
+
+</odoo>
