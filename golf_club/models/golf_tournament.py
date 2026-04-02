@@ -128,7 +128,7 @@ class GolfTournament(models.Model):
                 
     def action_open_leaderboard(self):
         for tournament in self:
-            action = self.env.ref("golf.action_golf_leaderboard_act_window").read()[0]
+            action = self.env.ref("golf_club.action_golf_leaderboard_act_window").read()[0]
             action["context"] = {}
             action["domain"] = ['&',("id", "in", tournament.card_ids.ids),("position",">",0)]
             return action

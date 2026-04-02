@@ -50,4 +50,4 @@ class PortalGolf(CustomerPortal):
             #'searchbar_filters': OrderedDict(sorted(searchbar_filters.items())),
             #'filterby':filterby,
         })
-        return request.render("golf.portal_my_golfcards", values)
+        return request.render("golf_club.portal_my_golfcards", values)
