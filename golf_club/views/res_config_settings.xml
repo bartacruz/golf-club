@@ -8,8 +8,7 @@
         <field name="arch" type="xml">
             <!-- 1. CAMBIO CLAVE: Apuntamos al formulario para insertar el bloque de la app -->
             <xpath expr="//form" position="inside">
-                <app_settings_block title="Golf" string="Golf" data-key="golf_club">
-                    
+                <app data-string="Golf" string="Golf Club" name="golf">
                     <!-- SECCIÓN: DATOS DEL CLUB -->
                     <h2>Datos del club</h2>
                     <div class="row mt16 o_settings_container">
@@ -75,8 +74,22 @@
                         </setting>
                     </div>
 
-                </app_settings_block>
+                </app>
             </xpath>
         </field>
     </record>
+    <record id="golf_config_settings_action" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'golf', 'bin_size': False}</field>
+    </record>
+
+    <menuitem id="golf_menu_configuration"
+        name="Settings"
+        parent="menu_golf_settings"
+        sequence="0"
+        action="golf_config_settings_action"
+        groups="base.group_system"/>
 </odoo>
