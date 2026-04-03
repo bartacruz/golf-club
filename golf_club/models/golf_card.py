@@ -63,7 +63,7 @@ class GolfCard(models.Model):
         golf_score = self.score_ids.filtered(lambda s: s.hole_number == hole_number)
         golf_score.score = score
 
-    @api.depends('account_move_id.state')
+    @api.depends('account_move_id.payment_state')
     def _compute_is_paid(self):
         for record in self:
             if record.account_move_id and record.account_move_id.payment_state == 'paid':
