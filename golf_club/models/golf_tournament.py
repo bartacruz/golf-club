@@ -90,11 +90,11 @@ class GolfTournament(models.Model):
     
     def _check_name(self):
         for record in self:
-            if record.name in [_('New'),'SPGC'] and record.tournament_mode_id and record.field_id:
+            if record.name in [_('New'),'SPGC'] and record.tournament_mode_id and record.field_ids:
                 if record.start_handicap != DEFAULT_START_HANDICAP or record.end_handicap != DEFAULT_END_HANDICAP:
                     record.name = '%s - Cat %d-%d' % (record.tournament_mode_id.name, record.start_handicap, record.end_handicap)    
                 else:
-                    record.name = '%s - %d hoyos' % (record.tournament_mode_id.name, record.field_id.hole_count,)
+                    record.name = '%s - %d hoyos' % (record.tournament_mode_id.name, len(record.get_holes()),)
 
     @api.model_create_multi
     def create(self,vals_list):
@@ -111,7 +111,7 @@ class GolfTournament(models.Model):
         return t
         
     def get_holes(self):
-        holes = list(self.field_id.hole_ids)
+        holes = list(self.field_ids.mapped("hole_ids"))
         return holes
 
     def action_print_leaderboard(self):
