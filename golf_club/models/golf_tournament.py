@@ -125,6 +125,12 @@ class GolfTournament(models.Model):
             action["domain"] = ['&',("id", "in", tournament.card_ids.ids),("position",">",0)]
             return action
 
+    def action_open_golf_cards(self):
+        self.ensure_one()
+        action = self.env.ref("golf_club.action_golf_card_act_window").read()[0]
+        action["domain"] = [("id", "in", self.card_ids.ids)]
+        return action
+    
     def get_leaderboard(self):
         self.ensure_one()
         GolfCard = self.env['golf.card']
