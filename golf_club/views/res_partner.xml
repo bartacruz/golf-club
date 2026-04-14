@@ -6,7 +6,8 @@
         <field name="arch" type="xml">
             <div name="button_box" position="inside">
 
-                <button class="oe_stat_button" type="object" invisible="golf_card_count==0" name="action_open_golf_cards" icon="fa-id-card" context="{'player_id': id}">
+                <button class="oe_stat_button" type="object" invisible="golf_card_count==0" name="action_open_golf_cards"
+                    icon="fa-id-card" context="{'player_id': id}">
                     <field string="Cards" name="golf_card_count" widget="statinfo" />
                 </button>
             </div>
@@ -45,7 +46,7 @@
                 <filter string="Members" name="type_golf_members" domain="[('golf_membership', '!=', False)]" />
                 <filter string="Licensed" name="type_golf_active_license" domain="[('golf_license_active', '=', True)]" />
                 <filter string="Not Licensed" name="type_golf_inactive_license" domain="[('golf_license_active', '=', False)]" />
-                <separator/>
+                <separator />
             </xpath>
         </field>
     </record>
@@ -55,25 +56,22 @@
         <field name="binding_model_id" ref="base.model_res_partner" />
         <field name="binding_view_types">list</field>
         <field name="model_id" ref="base.model_res_partner" />
-
         <field name="state">code</field>
         <field name="code">action = records.action_golf_membership_invoice()</field>
     </record>
 
-    <template id="portal_docs_entry" name="My Portal Docs Entry" inherit_id="portal.portal_docs_entry">
-        <a t-att-href="url" t-att-title="title" position="replace">
-            <a t-if="placeholder_count != '0'" class="col-5 align-items-center justify-content-between" t-att-href="url" t-att-title="title">
-                <div class="pepe bg-info h-100 p-4 text-center justify-content-between">
-                    <t t-if='count'>
-                        <h1 class="sa" t-esc="count" />
-                    </t>
-                    <t t-elif="placeholder_count">
-                        <h1 t-att-data-placeholder_count="placeholder_count">
-                            <i class="fa fa-spin fa-circle-o-notch"></i>
-                        </h1>
-                    </t>
-                    <span t-esc="title" />
-                </div>
+    <template id="portal_docs_entry" name="My Portal Docs Entry" inherit_id="portal.portal_docs_entry" priority="30">
+        <a t-att-href="url" t-att-title="title" position="before">
+            <a t-if="placeholder_count != '0'" class="col-5 align-items-center justify-content-between" t-att-href="url"
+                t-att-title="title">
+                <t t-if='count'>
+                    <h1 class="sa" t-esc="count" />
+                </t>
+                <t t-elif="placeholder_count">
+                    <h1 t-att-data-placeholder_count="placeholder_count">
+                        <i class="fa fa-spin fa-circle-o-notch"></i>
+                    </h1>
+                </t>
             </a>
         </a>
     </template>

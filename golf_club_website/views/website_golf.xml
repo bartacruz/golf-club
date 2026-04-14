@@ -4,7 +4,7 @@
     <template id="tournaments" name="Tournaments">
         <t t-call="website.layout">
             <div id="wrap">
-                <div class="oe_structure">
+                <div class="oe_structure" id="oe_structure_golf_tournaments">
                     <section>
                         <h1 class="text-center">
                             Tournaments
@@ -25,7 +25,7 @@
                                     <h5 class="card-title" t-field="tournament.name" />
                                     <p class="card-text">
                                         <span t-field="tournament.category" />
-                                        <span t-field="tournament.tournament_mode_id.name" /></p> 
+                                        <span t-field="tournament.tournament_mode_id.name" /></p>
                                     <a t-attf-href="/golf/tournament/#{slug(tournament)}" class="btn btn-outline-success">
                                         <span class="fa fa-trophy"></span>
                                         Leaderboard
