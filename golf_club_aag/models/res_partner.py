@@ -1,11 +1,11 @@
 from odoo import _,fields, models, api
-from . import aag_api
+from . import aag_secure_api
 
 class ResPartner(models.Model):
     _inherit = "res.partner"
     
     def create_from_external(self,golf_license):
-        player = aag_api.get_enrolled(golf_license)
+        player = aag_secure_api.get_enrolled(golf_license)
         if not player:
             return
         # {'EnrollmentNumber': '101261', 'Active': True, 'FirstNames': 'JULIO', 'LastNames': 'SANTA CRUZ ', 'HandicapStandard': -99, 'HandicapEven3': -99, 'HandicapIndex': 15.6, 'LowestHandicapIndex': 18.1, 'OptionClubId': 365, 'Category': 0, 'BornDate': '27-8-1971', 'DocNumber': '22278642'}
@@ -35,7 +35,7 @@ class ResPartner(models.Model):
         self.golf_player = True
         self.golf_license_active = data.get('Active')
         self.golf_handicap_index = data.get('HandicapIndex')
-        self.golf_handicap = aag_api.get_handicap(self.golf_handicap_index)
+        self.golf_handicap = aag_secure_api.get_handicap(self.golf_handicap_index)
         if not self.golf_membership:
             club = int(self.env['ir.config_parameter'].sudo().get_param('golf_club.club_id'))
             if data.get('OptionClubId',0) == club:
@@ -55,5 +55,5 @@ class ResPartner(models.Model):
         for record in self:
             if record.golf_license:
                 # get data from AAG
-                data = aag_api.get_enrolled(record.golf_license)
+                data = aag_secure_api.get_enrolled(record.golf_license)
                 record.update_from_external(data)

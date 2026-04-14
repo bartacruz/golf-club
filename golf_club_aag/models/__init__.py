@@ -1,1 +1,4 @@
-from . import (aag_api,golf_card,golf_tournament)
+from . import aag_secure_api
+from . import golf_card
+from . import golf_tournament
+from . import res_partner
