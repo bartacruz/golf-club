@@ -10,6 +10,12 @@ class PosOrderLine(models.Model):
 
     golf_card_id = fields.Many2one('golf.card', string='Golf Card', readonly=True)
 
+    @api.model
+    def _load_pos_data_fields(self, config_id):
+        fields = super()._load_pos_data_fields(config_id)
+        fields += ['golf_card_id']
+        return fields
+    
     def create_golf_card(self):
         tournament_id = self.env['golf.tournament'].search([ ('state','=','active')],limit=1)
         if not tournament_id:
