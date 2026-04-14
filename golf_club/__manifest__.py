@@ -4,23 +4,17 @@
 
     'summary': "Golf Club Module",
     'sequence': 1,
-    'description': """
-        Module for managing a Golf Club, players, fields, tournaments and cards.
-    """,
-
+    
     'author': "BartaTech",
     'website': "http://www.bartatech.com",
 
     'category': 'Sports',
     'version': '18.0.0.0.1',
 
-    # any module necessary for this one to work correctly
     'depends': ['base','mail','account','l10n_ar'],
 
-    # always loaded
     'data': [
         'security/ir.model.access.csv',
-        #'security/website_golf_security.xml',
         'data/ir_sequence.xml',
         'views/golf_field.xml',
         'views/golf_hole.xml',
@@ -38,7 +32,6 @@
     'installable': True,
     'application': True,
     "development_status": "Alpha",
-#    'images': ['static/description/golf-icon.png'],
     'assets': {
         'web.assets_backend': [
             # 'golf_club/static/src/js/golf_card_widget.js',
