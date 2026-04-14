@@ -1,5 +1,5 @@
 from odoo import models,fields,api,_
-from . import aag_api
+from . import aag_secure_api
 import re
 from datetime import datetime
 import logging
@@ -47,7 +47,7 @@ class GolfTournament(models.Model):
                 cards.append(card.get_external_data())
         
         print(data)
-        response = aag_api.post_tournament(data)
+        response = aag_secure_api.post_tournament(data)
         print('response',response)
         # TODO: retornar un mensaje de ok/error o algo similar
         if type(response) == str:
@@ -70,7 +70,7 @@ class GolfTournament(models.Model):
         if not self.external_reference:
             return False
         
-        t =aag_api.get_tournament(self.external_reference)
+        t =aag_secure_api.get_tournament(self.external_reference)
         print(t)
         self.tournament_mode_id = self.env['golf.tournament_mode'].search([('external_reference','=',t.get('GameMode'))]).id
         self.date = t.get('StartDate')
